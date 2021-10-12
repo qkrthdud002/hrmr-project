@@ -1,4 +1,5 @@
 var express = require('express');
+const dbcp=require('../model/dbcp');
 var router = express.Router();
 
 /* GET home page. */
@@ -20,7 +21,6 @@ router.post('/login', async(req, res)=>{
   conn.end();
 
   if(rows.length==0){
-    //회원 가입한 적이 없는 사람
     result='등록되지 않은 사용자 입니다.';
   }
   else {
@@ -34,12 +34,6 @@ router.post('/login', async(req, res)=>{
   }
  
   res.render('login', {result:result});
-});
-
-router.get('/logout',(req,res)=>{
-  req.session.destroy((err)=>{
-      res.redirect('/');//로그아웃하면 항상 홈으로 돌아감
-  });
 });
 
 module.exports = router;

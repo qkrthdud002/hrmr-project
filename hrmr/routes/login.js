@@ -42,15 +42,4 @@ router.get('/logout',(req,res)=>{
   });
 });
 
-//db에 사용자 추가. session 추가 후 메인 페이지로 이동
-router.post('/register',async(req,res)=>{
-  const {userId,name,password}=req.body;
-  const conn=await dbcp.getConnection();
-  let sql = 'insert into user (userId,name,password) '
-  sql+='values(?,?,?)'
-  const rows=await conn.query(sql,[userId,name,password]);
-  req.session.userId=userId;
-  res.redirect('/');
-});
-
 module.exports = router;

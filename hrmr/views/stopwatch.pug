@@ -3,3 +3,13 @@ extends layout
 block content
     div(class='container')
         h2 스톱워치
+            h1
+                span#munutes 00:
+                span /
+                span#seconds 00:
+                span /
+                span#tenMillis 00
+                span /
+                button(id='bt__start') Start
+                button(id='bt__stop') Stop
+                button(id='bt__reset') Reset

@@ -10,9 +10,3 @@ a {
 .login-h3{
   color:grey;
 }
-
-.login-img{
-  background-image: url("../../views/hrmr.png");
-  width: 100px;
-  height: 100px;
-}

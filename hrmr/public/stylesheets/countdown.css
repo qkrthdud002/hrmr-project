@@ -2,21 +2,29 @@
     text-align: center;
 }
 
-.countdown_circle {
+.countdown_time {
+    margin: auto;
+    width : 300px;
+    height : 300px;
+    border: 14px solid rgb(255, 199, 0);
+    border-radius: 50%;
+    padding: 50px;
+}
+
+/* .countdown_circle {
     margin: auto;
     width : 500px;
     height : 500px;
     border: 15px solid rgb(255, 199, 0);
     border-radius: 50%;
-}
+} */
 
-h1 > span{
+h1 > span {
     display: inline-block;
     width: 50px;
 }
 
 .countdown_button {
-    margin: auto;
     color: black; background-color: white;
     font-size: 16px; padding: 6px;
     width: 100px; border: none; border-radius: 3px;

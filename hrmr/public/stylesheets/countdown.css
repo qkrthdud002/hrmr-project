@@ -1,6 +1,6 @@
-.circle {
+.countdown_circle {
     width : 300px;
     height : 300px;
-    border: 10px solid rgb(0, 162, 255);
+    border: 10px solid rgb(255, 199, 0);
     border-radius: 50%;
 }

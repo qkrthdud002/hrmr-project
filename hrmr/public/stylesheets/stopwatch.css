@@ -1,23 +1,49 @@
+.container {
+    text-align: center;
+}
+
 .stopwatch_circle {
-    width : 300px;
-    height : 300px;
-    border: 10px solid rgb(255, 199, 0);
+    margin: auto;
+    width : 500px;
+    height : 500px;
+    border: 15px solid rgb(255, 199, 0);
     border-radius: 50%;
 }
 
 h1 > span{
     display: inline-block;
-    width: 100px;
+    width: 50px;
 }
 
-button{
+.buttonstart {
     color: black; background-color: white;
     font-size: 16px; padding: 6px;
     width: 100px; border: none; border-radius: 3px;
     cursor: pointer;
 }
 
-button:active{
+.buttonstop {
+    color: black; background-color: white;
+    font-size: 16px; padding: 6px;
+    width: 100px; border: none; border-radius: 3px;
+    cursor: pointer;
+}
+.buttonreset {
+    color: black; background-color: white;
+    font-size: 16px; padding: 6px;
+    width: 100px; border: none; border-radius: 3px;
+    cursor: pointer;
+}
+
+.buttonstart:active{
+    color: white;
+    background-color:rgb(255, 199, 0);
+}
+.buttonstop:active{
+    color: white;
+    background-color:rgb(255, 199, 0);
+}
+.buttonreset:active{
     color: white;
     background-color:rgb(255, 199, 0);
 }

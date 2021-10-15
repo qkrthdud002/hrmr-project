@@ -12,6 +12,7 @@ a {
 }
 
 .login-img{
-  border-width: 1.0px;
-  border-top-left-radius: 1.0px;
+  background-image: url("../../views/hrmr.png");
+  width: 100px;
+  height: 100px;
 }

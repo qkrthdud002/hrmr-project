@@ -1,13 +1,29 @@
+
 .container {
     text-align: center;
 }
 
 .stopwatch_circle {
     margin: auto;
-    width : 500px;
-    height : 500px;
+    width: 600px;
+    height: 600px;
+
     border: 15px solid rgb(255, 199, 0);
     border-radius: 50%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+}
+
+h1{
+    margin-bottom: 5%;
+}
+
+.buttons{
+    margin-top: 0%;
 }
 
 h1 > span{
@@ -18,8 +34,8 @@ h1 > span{
 .stopwatch_button {
     margin: auto;
     color: black; background-color: white;
-    font-size: 16px; padding: 6px;
-    width: 100px; border: none; border-radius: 3px;
+    font-size: 30px; padding: 10px;
+    width: 180px; border: none; border-radius: 8px;
     cursor: pointer;
 }
 

@@ -1,24 +1,6 @@
-*{ box-sizing: botder-box }
-pug, body{ margin : 0 }
-
 .circle {
     width : 300px;
     height : 300px;
-    border: 10px solid rgb(255, 199, 0);
+    border: 10px solid rgb(124, 124, 255);
     border-radius: 50%;
-}
-
-h2 { color: black; }
-h1 { color: black; }
-
-h1 > span{
-    display: inline-block;
-    width: 40px;
-}
-
-button{ 
-    color: black; background-color: white;
-    font-size: 16px; padding: 6px;
-    width: 100px; border: none; border-radius: 3px;
-    cursor: pointer;
 }

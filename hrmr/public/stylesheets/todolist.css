@@ -6,12 +6,12 @@
     border-bottom-width:1;
     
 }
-input:focus.todo{
+.todo{
     outline:0px solid;
+    width:500px;
+    height:10px;
 }
-
-.img{
-    background-image: url("../../views/hrmr.png");
-    width: 100px;
-    height: 100px;
+.checkboxsize{
+    width:25px;
+    height:25px;
 }

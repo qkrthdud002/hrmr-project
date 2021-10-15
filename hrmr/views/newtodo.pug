@@ -1,10 +1,14 @@
-extends layout
-
-block content
-    
+extends layout.pug
+block content        
     body
-        script(src='/javascripts/newtodo.js')
         h1 ToDo 작성
         form.toDoForm
             input(type='text' placeholder='할일들을 입력해주세요')
-            
+        h3 시작 
+            input(type="date", name="todaysdate" )
+        h3 종료 
+            input(type="date", name="todaysdate" )
+        button
+        button
+        button
+    script(src='/javascripts/newtodo.js')

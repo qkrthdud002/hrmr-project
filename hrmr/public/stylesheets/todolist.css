@@ -9,3 +9,9 @@
 input:focus.todo{
     outline:0px solid;
 }
+
+.img{
+    background-image: url("../../views/hrmr.png");
+    width: 100px;
+    height: 100px;
+}

@@ -11,7 +11,7 @@ a {
   color:grey;
 }
 
-.login.img{
-  border-width: 1.0;
-  border-top-left-radius: 1.0;
+.login-img{
+  border-width: 1.0px;
+  border-top-left-radius: 1.0px;
 }

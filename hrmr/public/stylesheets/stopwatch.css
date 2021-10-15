@@ -15,3 +15,10 @@ h1 > span{
     display: inline-block;
     width: 40px;
 }
+
+button{ 
+    color: black; background-color: white;
+    font-size: 16px; padding: 6px;
+    width: 100px; border: none; border-radius: 3px;
+    cursor: pointer;
+}

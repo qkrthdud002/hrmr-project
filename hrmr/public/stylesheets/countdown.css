@@ -1,4 +1,9 @@
+.jaemok {
+    text-align: center;
+}
+
 .countdown_circle {
+    margin: auto;
     width : 300px;
     height : 300px;
     border: 10px solid rgb(255, 199, 0);

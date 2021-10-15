@@ -5,7 +5,7 @@ block content
     form(action='/users/register',method='post')
         h3(class='login-h3') 아이디
         input(type='text', name='userId', placeholder='아이디')
-        input(type='submit', value='중복확인' class="is-full")
+        <button>중복확인</button>
         br
         h3(class='login-h3') 비밀번호
         input(type='password', name='password', placeholder="비밀번호")
@@ -13,5 +13,6 @@ block content
         h3(class='login-h3') 비밀번호 확인
         input(type='passwordcheck', name='passwordcheck', placeholder="비밀번호 확인")
         br
-        <button type="button">회원가입</button>
+        br
+        <button type="button" class="join" style="display:block; width:9.8%; text-align:center;font-size:0.8em; padding:1px;">회원가입</button>
     p= result 

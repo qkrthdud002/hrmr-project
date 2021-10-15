@@ -7,5 +7,5 @@
     
 }
 input:focus.todo{
-    outline:2px solid white;
+    outline:0px solid;
 }

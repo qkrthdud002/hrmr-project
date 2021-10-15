@@ -2,13 +2,15 @@ extends layout
 
 block content
     div(class='container')
-        h2 Stop watch
+        h2 STOP WATCH
         div(class='stopwatch_circle')
             h1
-                span#munutes 00:
-                span#seconds 00:
+                span#munutes 00
+                span :
+                span#seconds 00
+                span :
                 span#tenMillis 00
             h2
-                button(class='button') 시작
-                button(class='button') 일시중지
-                button(class='button') 종료
+                button(class='buttonstart') 시작
+                button(class='buttonstop') 일시중지
+                button(class='buttonreset') 종료

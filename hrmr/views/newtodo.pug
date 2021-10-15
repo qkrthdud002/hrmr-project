@@ -1,7 +1,10 @@
 extends layout
 
 block content
-
-    h1 dldbsjtd
-    script(src='/javascripts/newtodo')
-    button(onclick="editItem(#{item.id})", title="Edit")
+    
+    body
+        script(src='/javascripts/newtodo.js')
+        h1 ToDo 작성
+        form.toDoForm
+            input(type='text' placeholder='할일들을 입력해주세요')
+            

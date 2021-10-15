@@ -2,10 +2,13 @@ extends layout
 
 block content
   p Todo
-  input(type="date", name="todaysdate")
+  input(type="date", name="todaysdate" )
   br
-  input(type="checkbox", name="todolist")
-  input(type="a-checkbox", name="todolist1")
+  input(type="checkbox", name="todolist" class="todo")
+  input(type="text", name="todolist1" class="todo")
   br
-  label.a-checkbox
-    input(type="checkbox")
+  //- label.a-checkbox
+  input(type="checkbox" )
+  //-input(type="checkbox" checked=true)
+  input(type="text", name="todolist2" class="todo")
+  

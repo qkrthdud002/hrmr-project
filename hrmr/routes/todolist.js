@@ -7,7 +7,6 @@ router.get('/', function(req, res, next) {
   res.render('todolist', { title: 'todo' });
 
   res.render('todolist', { title: 'Todo' });
-  
 
 });
 

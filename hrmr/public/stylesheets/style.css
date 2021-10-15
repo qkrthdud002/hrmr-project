@@ -10,3 +10,8 @@ a {
 .login-h3{
   color:grey;
 }
+
+.login.img{
+  border-width: 1.0;
+  border-top-left-radius: 1.0;
+}

@@ -1,0 +1,11 @@
+.todo{
+    /* border: 0 solid ; */
+    border-left-width:0;
+    border-right-width:0;
+    border-top-width:0;
+    border-bottom-width:1;
+    
+}
+input:focus.todo{
+    outline:0px solid;
+}

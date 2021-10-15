@@ -15,27 +15,28 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    font-size: xx-large;
+
+    font-size: 50px;
 }
 
-h1{
-    margin-bottom: 5%;
+h1 {
+    margin-bottom: 8%;
 }
 
-.buttons{
+.buttons {
     margin-top: 0%;
 }
 
-h1 > span{
+h1 > span {
     display: inline-block;
     width: 50px;
 }
 
 .stopwatch_button {
-    margin: auto;
+    margin-right: 15px;
     color: black; background-color: white;
     font-size: 30px; padding: 10px;
-    width: 180px; border: none; border-radius: 8px;
+    width: 160px; border: none; border-radius: 8px;
     cursor: pointer;
 }
 

@@ -49,3 +49,7 @@ h1 > span {
     color: white;
     background-color:rgb(255, 199, 0);
 }
+
+.timer{
+    margin-right: 64px;
+}

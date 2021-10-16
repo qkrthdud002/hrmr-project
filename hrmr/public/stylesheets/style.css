@@ -11,8 +11,24 @@ a {
   color:grey;
 }
 
-.login-img{
-  background-image: url("../../views/hrmr.png");
-  width: 100px;
-  height: 100px;
+.login-center{
+    margin: auto;
+    width: 60%;
+    height: 60%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-screen{
+    margin: auto;
+    width: 60%;
+    height: 60%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }

@@ -7,19 +7,29 @@ html
     link(rel='stylesheet', href='/stylesheets/todolist.css')
     link(rel='stylesheet', href='/stylesheets/stopwatch.css')
   body
-  h1 할래말래
+  div(class='main-screen')
     br
     br
-    img(class='login-img', img src="hrmr.png")
+    img(src='../images/hrmr.png' width='200' height='200')
+    br
+    br
     ul 
       li 
-        a(href='/login') LOGIN
+        a(href='/login')
+          h3 LOGIN
       li 
-        a(href='/register') REGISTER
+        a(href='/register') 
+          h3 REGISTER
       li 
-        a(href='/todolist') TODOLIST
+        a(href='/todolist') 
+          h3 TODOLIST
       li 
-        a(href='/countdown') COUNTDOWN
+        a(href='/newtodolist') 
+          h3 NEWTODOLIST
+      li
+        a(href='/countdown') 
+          h3 COUNTDOWN
       li 
-        a(href='/stopwatch') STOPWATCH
+        a(href='/stopwatch') 
+          h3 STOPWATCH
     block content

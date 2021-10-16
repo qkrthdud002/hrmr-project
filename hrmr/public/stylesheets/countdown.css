@@ -1,23 +1,27 @@
+
 .jaemok {
     text-align: center;
 }
 
-.countdown_time {
+.countdown_circle {
     margin: auto;
-    width : 300px;
-    height : 300px;
-    border: 14px solid rgb(255, 199, 0);
-    border-radius: 50%;
-    padding: 50px;
-}
+    width: 600px;
+    height: 600px;
 
-/* .countdown_circle {
-    margin: auto;
-    width : 500px;
-    height : 500px;
     border: 15px solid rgb(255, 199, 0);
     border-radius: 50%;
-} */
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 50px;
+}
+
+.buttons {
+    margin-top: 0%;
+}
 
 h1 > span {
     display: inline-block;
@@ -25,9 +29,10 @@ h1 > span {
 }
 
 .countdown_button {
+    margin-right: 15px;
     color: black; background-color: white;
-    font-size: 16px; padding: 6px;
-    width: 100px; border: none; border-radius: 3px;
+    font-size: 30px; padding: 10px;
+    width: 160px; border: none; border-radius: 8px;
     cursor: pointer;
 }
 
@@ -39,4 +44,8 @@ h1 > span {
 .countdown_button:active {
     color: white;
     background-color:rgb(255, 199, 0);
+}
+
+.timer{
+    margin-right: 64px;
 }

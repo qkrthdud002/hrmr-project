@@ -10,7 +10,6 @@ html
   body
   div(class='main-screen')
     br
-
     br
     ul 
       li 
@@ -23,9 +22,6 @@ html
         a(href='/register') 
           h3 REGISTER
       li 
-        a(href='/todolist') 
-          h3 TODOLIST
-      li 
         a(href='/newtodolist') 
           h3 NEWTODOLIST
       li
@@ -34,4 +30,8 @@ html
       li 
         a(href='/stopwatch') 
           h3 STOPWATCH
-    block content
+  ul
+    a(href='/todolist') 
+      h3 TODOLIST
+block content
+

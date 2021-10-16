@@ -41,9 +41,9 @@ a {
 } */ 
 
 .main-screen{
-    margin: auto;
+    /*margin: auto;
     width: 60%;
-    height: 60%;
+    height: 60%;*/
 
     display: flex;
     flex-flow: column nowrap;

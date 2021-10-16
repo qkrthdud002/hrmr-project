@@ -4,7 +4,7 @@ block content
     div(class='container')
         h2 STOP WATCH
         div(class='stopwatch_circle')
-            h1(class="timer")
+            h1(class="stopwatch_timer")
                 span#minutes 00
                 span
                 span :
@@ -12,7 +12,7 @@ block content
                 span
                 span :
                 span#tenMillis 00
-            h3(class = "buttons")
-                button(class='stopwatch_button') 시작
-                button(class='stopwatch_button') 일시중지
-                button(class='stopwatch_button') 종료
+            h3(class = "stopwatch_buttons")
+                button(class='stopwatch_button_start') 시작
+                button(class='stopwatch_button_stop') 일시중지
+                button(class='stopwatch_button_reset') 종료

@@ -46,6 +46,10 @@ h1 > span {
     background-color:rgb(255, 199, 0);
 }
 
-.timer{
+.countdown_timer{
     margin-right: 64px;
+}
+
+.countdown_buttons{
+    margin-right: -10px;
 }

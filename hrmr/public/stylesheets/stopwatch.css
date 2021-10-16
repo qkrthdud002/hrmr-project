@@ -1,4 +1,3 @@
-
 .container {
     text-align: center;
 }
@@ -48,4 +47,8 @@ h1 > span {
 
 .timer{
     margin-right: 64px;
+}
+
+h2 {
+    font-size: 50px;
 }

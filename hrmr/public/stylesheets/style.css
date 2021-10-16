@@ -22,6 +22,24 @@ a {
     align-items: center;
 }
 
+/* .checkboxsize{
+  float: left;
+  width:30px;
+  height:30px;
+}
+
+.todo{
+  /* border: 0 solid ; */
+  /* border-left-width:0;
+  border-right-width:0;
+  border-top-width:0;
+  border-bottom-width:1;
+  
+  outline:0px solid;
+  width:900px;
+  height:40px;
+} */ 
+
 .main-screen{
     margin: auto;
     width: 60%;

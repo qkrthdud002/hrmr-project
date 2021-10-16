@@ -5,7 +5,7 @@ const onSubmit = (event) =>{
     event.preventDefault();
     const currentInputValue = toDoInput.value;
     console.log(currentInputValue);
-    toDoInput.value = ""    
+    toDoInput.value = ""
 }
 
 const init = () =>{

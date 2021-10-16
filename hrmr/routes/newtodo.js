@@ -5,5 +5,4 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('newtodo', { title: 'Express' });
 });
-router.post('/',)
 module.exports = router;

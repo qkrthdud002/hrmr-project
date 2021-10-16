@@ -11,6 +11,7 @@ var newtodoRouter = require('./routes/newtodo');
 var registerRouter = require('./routes/register');
 var stopwatchRouter = require('./routes/stopwatch');
 var todolistRouter = require('./routes/todolist');
+var mainRouter = require('./routes/main')
 
 var app = express();
 
@@ -25,6 +26,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/main', mainRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/todolist', todolistRouter);

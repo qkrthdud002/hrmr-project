@@ -5,4 +5,6 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('newtodo', { title: 'Express' });
 });
-module.exports = router;
+router.post('/', function(req, res, next){
+  res.send('newtodo', {title:''})
+});

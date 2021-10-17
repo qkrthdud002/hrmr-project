@@ -23,9 +23,18 @@ a {
 }
 
 .login-box{
-  outline-style: solid;
+  color: LightGray;
+  outline-style: ridge;
   width: 450px;
-  height: 350px;
+  height: 320px;
+}
+
+.login-h1{
+  color: black;
+}
+
+.login-register-center{
+  text-align: center;
 }
 
 /* .checkboxsize{

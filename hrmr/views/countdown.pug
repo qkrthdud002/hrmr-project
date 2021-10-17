@@ -1,10 +1,10 @@
 extends layout
 
 block content
-    div(class='jaemok')
+    div(class='countdown_container')
         h2 COUNT DOWN
         div(class='countdown_circle')
-            h1(class="countdown_timer")
+            h1(class="timer")
                 span#munutes 00
                 span
                 span :
@@ -12,7 +12,7 @@ block content
                 span
                 span :
                 span#tenMillis 00
-            h3(class = "countdown_buttons")
-                button(class='countdown_button') 시작
-                button(class='countdown_button') 일시중지
-                button(class='countdown_button') 종료
+            h3(class = "buttons")
+                button(class='stopwatch_button') 시작
+                button(class='stopwatch_button') 일시중지
+                button(class='stopwatch_button') 종료

@@ -12,14 +12,20 @@ a {
 }
 
 .login-center{
-    margin: auto;
-    width: 60%;
-    height: 60%;
+  margin: auto;
+  width: 60%;
+  height: 60%;
 
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box{
+  outline-style: solid;
+  width: 450px;
+  height: 350px;
 }
 
 /* .checkboxsize{

@@ -22,6 +22,10 @@ a {
     align-items: center;
 }
 
+.login-box{
+  
+}
+
 /* .checkboxsize{
   float: left;
   width:30px;
@@ -41,9 +45,9 @@ a {
 } */ 
 
 .main-screen{
-    /*margin: auto;
+    margin: auto;
     width: 60%;
-    height: 60%;*/
+    height: 60%;
 
     display: flex;
     flex-flow: column nowrap;

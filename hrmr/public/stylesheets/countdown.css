@@ -1,4 +1,3 @@
-
 .jaemok {
     text-align: center;
 }
@@ -19,9 +18,6 @@
     font-size: 50px;
 }
 
-.buttons {
-    margin-top: 0%;
-}
 
 h1 > span {
     display: inline-block;
@@ -32,7 +28,7 @@ h1 > span {
     margin-right: 15px;
     color: black; background-color: white;
     font-size: 30px; padding: 10px;
-    width: 160px; border: none; border-radius: 8px;
+    width: 150px; border: none; border-radius: 8px;
     cursor: pointer;
 }
 
@@ -46,6 +42,10 @@ h1 > span {
     background-color:rgb(255, 199, 0);
 }
 
-.timer{
+.countdown_timer{
     margin-right: 64px;
+}
+
+.countdown_buttons{
+    margin-right: -10px;
 }

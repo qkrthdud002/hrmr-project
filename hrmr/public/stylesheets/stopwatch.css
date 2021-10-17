@@ -18,37 +18,73 @@
     font-size: 50px;
 }
 
-.buttons {
-    margin-top: 0%;
-}
-
 h1 > span {
     display: inline-block;
     width: 50px;
 }
 
-.stopwatch_button {
+.stopwatch_button_start {
     margin-right: 15px;
     color: black; background-color: white;
     font-size: 30px; padding: 10px;
-    width: 160px; border: none; border-radius: 8px;
+    width: 150px; border: none; border-radius: 8px;
     cursor: pointer;
 }
 
-.stopwatch_button:hover {
+.stopwatch_button_start:hover {
     color: rgb(53, 53, 53);
     background-color:rgb(255, 245, 211);
 }
 
-.stopwatch_button:active {
+.stopwatch_button_start:active {
     color: white;
     background-color:rgb(255, 199, 0);
 }
 
-.timer{
+.stopwatch_button_stop {
+    margin-right: 15px;
+    color: black; background-color: white;
+    font-size: 30px; padding: 10px;
+    width: 150px; border: none; border-radius: 8px;
+    cursor: pointer;
+}
+
+.stopwatch_button_stop:hover {
+    color: rgb(53, 53, 53);
+    background-color:rgb(255, 245, 211);
+}
+
+.stopwatch_button_stop:active {
+    color: white;
+    background-color:rgb(255, 199, 0);
+}
+
+.stopwatch_button_reset {
+    margin-right: 15px;
+    color: black; background-color: white;
+    font-size: 30px; padding: 10px;
+    width: 150px; border: none; border-radius: 8px;
+    cursor: pointer;
+}
+
+.stopwatch_button_reset:hover {
+    color: rgb(53, 53, 53);
+    background-color:rgb(255, 245, 211);
+}
+
+.stopwatch_button_reset:active {
+    color: white;
+    background-color:rgb(255, 199, 0);
+}
+
+.stopwatch_timer{
     margin-right: 64px;
 }
 
 h2 {
     font-size: 50px;
+}
+
+.stopwatch_buttons {
+    margin-right: -10px;
 }

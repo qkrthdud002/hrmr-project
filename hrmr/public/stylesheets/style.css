@@ -24,8 +24,14 @@ a {
 
 .login-box{
   outline-style: solid;
+  margin: auto;
   width: 450px;
   height: 350px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 /* .checkboxsize{

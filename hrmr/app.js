@@ -30,7 +30,6 @@ app.use('/main', mainRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/todolist', todolistRouter);
-app.use('/newtodo', newtodoRouter);
 app.use('/stopwatch', stopwatchRouter);
 app.use('/countdown', countdownRouter);
 

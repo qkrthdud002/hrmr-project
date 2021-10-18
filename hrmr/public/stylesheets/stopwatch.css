@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&display=swap');
+
 .stopwatch_container {
     text-align: center;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 .stopwatch_circle {
@@ -27,8 +30,9 @@ h1 > span {
     margin-right: 15px;
     color: black; background-color: white;
     font-size: 30px; padding: 10px;
-    width: 150px; border: 2px solid rgb(255, 199, 0); border-radius: 8px;
+    width: 150px; border: 1px solid rgb(255, 199, 0); border-radius: 8px;
     cursor: pointer;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 .stopwatch_button_start:hover {
@@ -45,8 +49,9 @@ h1 > span {
     margin-right: 15px;
     color: black; background-color: white;
     font-size: 30px; padding: 10px;
-    width: 150px; border: 2px solid rgb(255, 199, 0); border-radius: 8px;
+    width: 150px; border: 1px solid rgb(255, 199, 0); border-radius: 8px;
     cursor: pointer;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 .stopwatch_button_stop:hover {
@@ -63,8 +68,9 @@ h1 > span {
     margin-right: 15px;
     color: black; background-color: white;
     font-size: 30px; padding: 10px;
-    width: 150px; border: 2px solid rgb(255, 199, 0); border-radius: 8px;
+    width: 150px; border: 1px solid rgb(255, 199, 0); border-radius: 8px;
     cursor: pointer;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 .stopwatch_button_reset:hover {
@@ -79,6 +85,7 @@ h1 > span {
 
 .stopwatch_timer{
     margin-right: 64px;
+    text-align: center;
 }
 
 h2 {

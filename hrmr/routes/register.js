@@ -17,9 +17,13 @@ router.post('/', async (req, res) => {
   const db = await dbcp.getConnection()
   const alreadyExistsUser = await db.query(`SELECT * FROM user_information WHERE user_id=${userId}`)
   if(alreadyExistsUser != null || alreadyExistsUser != undefined) {
-    // TODO: 유저 중복 예외처리
+    res.set(409).send('Conflict: user already exists')
+    return
   }
+  const queryData = `${userId}, ${password}`
+  db.query(`INSERT INTO user_information(user_id, user_password) VALUES(${queryData})`)
 
+  res.set(201).send("User created!")
 })
 
 module.exports = router;

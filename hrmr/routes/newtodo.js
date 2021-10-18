@@ -5,8 +5,5 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('newtodo', { title: 'Express' });
 });
-router.post('/', function(req, res, next){
-  res.send('newtodo', {title:''})
-});
 
 module.exports = router;

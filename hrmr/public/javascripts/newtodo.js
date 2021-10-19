@@ -2,7 +2,7 @@ const toDoForm = document.querySelector(".toDoForm");
 const toDoInput = document.querySelector(".toDoForm input");
 
 const onSubmit = (event) =>{
-
+    event.preventDefault();
     const currentInputValue = toDoInput.value;
     console.log(currentInputValue);
     toDoInput.value = ""

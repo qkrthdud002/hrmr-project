@@ -1,18 +1,20 @@
 extends layout 
 
 block content 
+
     h1 회원가입
     br
-    h3(class='login-h3') 아이디
-    input(type='text', name='userId', id = 'userId' placeholder='아이디')
-    br
-    h3(class='login-h3') 비밀번호
-    input(type='password', name='password', id = 'password' placeholder="비밀번호")
-    br
-    h3(class='login-h3') 비밀번호 확인
-    input(type='password', name='passwordcheck', id = 'passwordcheck' placeholder="비밀번호 확인")
-    br
-    br
-    button(class='button-submit' style="display:block; width:30%; text-align:center; font-size:0.8em; padding:7px;") 회원가입
+    div(class='register-center')
+        h3(class='login-h3') 아이디
+        input(type='text', name='userId', id = 'userId' placeholder='아이디')
+        br
+        h3(class='login-h3') 비밀번호
+        input(type='password', name='password', id = 'password' placeholder="비밀번호")
+        br
+        h3(class='login-h3') 비밀번호 확인
+        input(type='password', name='passwordcheck', id = 'passwordcheck' placeholder="비밀번호 확인")
+        br
+        br
+        button(class='button-submit' style="display:block; width:30%; text-align:center; font-size:0.8em; padding:7px;") 회원가입
     script(src='/javascripts/register.js')
     p= result

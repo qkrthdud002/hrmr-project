@@ -10,11 +10,14 @@ block content
     br
     div(class='login-center' class='login-box')
         h1(class='login-h1') 로그인
+        br
         form(action='/login',method='post')
-            label(for='userId', class='login-label') 아이디
-            input(type='text', name='userId', id='userId' placeholder='아이디')
-            h3(class='login-h3') 비밀번호
-            input(type='password', name='password',placeholder='비밀번호')
+            label(for='userId', class='login-label') 아이디   
+            input(type='text', name='userId', id='userId', placeholder='ID')
+            br
+            br
+            lable(for='userpw', class='login-label') 비밀번호
+            input(type='password', name='password', id='userpw', placeholder='PASSWORD')
             br
             br
             input(type='submit', value='로그인' style="display:block; width:100%; text-align:center; font-size:0.8em; padding:1px;")

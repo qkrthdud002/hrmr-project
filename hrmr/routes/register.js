@@ -8,22 +8,19 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', async (req, res) => {
-  const { userId, password, passwordcheck } = req.body
-  if(password !== passwordcheck) {
-    res.set(400).send('Bad request: 비번이랑 확인용 비번 달라요')
-    return
-  }
-  
+  const { userId, password} = req.body
+  console.log(userId)
   const db = await dbcp.getConnection()
   const alreadyExistsUser = await db.query(`SELECT * FROM user_information WHERE user_id=${userId}`)
   if(alreadyExistsUser != null || alreadyExistsUser != undefined) {
-    res.set(409).send('Conflict: user already exists')
+    res.set(409).send({boom:'아이디 중복'})
     return
   }
   const queryData = `${userId}, ${password}`
   db.query(`INSERT INTO user_information(user_id, user_password) VALUES(${queryData})`)
 
-  res.set(201).send("User created!")
+  res.set(201).send({result:'user create'})
+  // res.json({result:'ok'});
 })
 
 module.exports = router;

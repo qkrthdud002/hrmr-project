@@ -1,4 +1,4 @@
-.button-submint {
+.button-submit {
     background-color: rgb(255, 199, 0);
     color: black;
 }
@@ -9,4 +9,14 @@
     color: rgb(255, 199, 0);
 }
 
+.register-center{
+    margin: auto;
+    width: 60%;
+    height: 60%;
+  
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
 

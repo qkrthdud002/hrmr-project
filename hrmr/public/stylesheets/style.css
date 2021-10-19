@@ -80,3 +80,10 @@ a {
   background-color: rgb(250, 211, 71);
   color: rgb(68, 68, 68);
 }
+
+.remove-line{
+  border-left-width:0;
+  border-right-width:0;
+  border-top-width:0;
+  border-bottom-width:0;
+}

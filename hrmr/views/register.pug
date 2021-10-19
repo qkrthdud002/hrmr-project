@@ -1,20 +1,26 @@
 extends layout 
 
 block content 
-
-    h1 회원가입
-    br
-    div(class='register-center')
-        h3(class='login-h3') 아이디
-        input(type='text', name='userId', id = 'userId' placeholder='아이디')
+    img(class='login-image' src='../images/hrmr.png' width=200 height=200)
+    div(style='line-height:1200%')
         br
-        h3(class='login-h3') 비밀번호
-        input(type='password', name='password', id = 'password' placeholder="비밀번호")
+    div(class='register-center' class='login-box')
+        h1(class='login-h1') 회원가입
         br
-        h3(class='login-h3') 비밀번호 확인
-        input(type='password', name='passwordcheck', id = 'passwordcheck' placeholder="비밀번호 확인")
-        br
-        br
-        button(class='button-submit' style="display:block; width:30%; text-align:center; font-size:0.8em; padding:7px;") 회원가입
+        form(action='/register',method='post')
+            label(for='userId', class='login-label') 아이디   
+            input(class='input is-medium' type='text', size="21", name='userId', id='userId', placeholder='ID')
+            br
+            br
+            lable(for='userpw', class='login-label') 비밀번호
+            input(class='input is-medium' type='password', size="19", name='password', id='userpw', placeholder='PASSWORD')
+            br
+            br
+            lable(for='userpw', class='login-label') 비밀번호 확인
+            input(class='input is-medium' type='password', size="19", name='password', id='userpw', placeholder='PASSWORD')
+            br
+            br
+            input(class='input is-normal' class='input is-warning' type='submit', value='로그인' style='display:block; width:100%; text-align:center; font-size:0.8em; padding:7px;' class='button-submint')
+            br
     script(src='/javascripts/register.js')
     p= result

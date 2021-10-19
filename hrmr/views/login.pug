@@ -9,14 +9,14 @@ block content
         br
         form(action='/login',method='post')
             label(for='userId', class='login-label') 아이디   
-            input(class='input is-medium' type='text', name='userId', id='userId', placeholder='ID')
+            input(class='input is-medium' type='text', size="21", name='userId', id='userId', placeholder='ID')
             br
             br
             lable(for='userpw', class='login-label') 비밀번호
             input(class='input is-medium' type='password', size="19", name='password', id='userpw', placeholder='PASSWORD')
             br
             br
-            input(class='input is-normal' class='input is-warning' type='submit', value='로그인' style='display:block; width:100%; text-align:center; font-size:0.8em; padding:1px;')
+            input(class='input is-normal' class='input is-warning' type='submit', value='로그인' style='display:block; width:100%; text-align:center; font-size:0.8em; padding:7px;' class='button-submint')
             br
             a(href='/register' class='login-register-center' font-size = 15) 회원가입
     p=result  

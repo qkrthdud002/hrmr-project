@@ -75,3 +75,8 @@ a {
     justify-content: center;
     align-items: center;
 }
+
+.button-submit {
+  background-color: rgb(250, 211, 71);
+  color: rgb(68, 68, 68);
+}

@@ -16,16 +16,16 @@
 }
 .todo{
     outline:0px solid;
-    width:900px;
-    height:40px;
+    width:53%;
+    height: 50%;
 }
 div.Todotitle{
     font-size:130px;
     text-align: center;
 }
 .checkboxsize{
-    width:30px;
-    height:30px;
+    width:20px;
+    height:20px;
 }
 .todobutton{
     width:30%;

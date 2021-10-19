@@ -31,12 +31,16 @@ div.Todotitle{
     width:30px;
     height:30px;
 }
+pattern{
+    background: repeating-linear-gradient(90deg, #444 10px, #888 0, #888 20px);
+    background: repeating-linear-gradient(#444, #444 10px, #888 0, #888 20px);
+}
 vr{
     display:block;
     width:5px;
     background-color: black;
     position:absolute;
-    top:870px;
+    top:770px;
     bottom:-900px;
     right:850px;
 }

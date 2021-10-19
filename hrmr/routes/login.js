@@ -4,15 +4,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', async function(req, res, next) {
-  const conn=await dbcp.getConnection();
-  res.render('login', { title: 'Express' });
-});
-
-router.get('/login',(req, res)=>{
   res.render('login');
 });
 
-router.post('/login', async(req, res)=>{
+router.post('/', async(req, res)=>{
   const {userId, password} = req.body;
   let result='';
 

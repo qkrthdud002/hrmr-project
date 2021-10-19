@@ -12,7 +12,7 @@ router.post('/', async(req, res)=>{
   let result='';
 
   const conn=await dbcp.getConnection();
-  const rows = await conn.query('select userId, password from user where userId=?',[userId])//?표에 들어갈 것은 다음 명령어? 배열에서 알려줌
+  const rows = await conn.query('select user_id, user_password from user_information where user_id=?',[userId])//?표에 들어갈 것은 다음 명령어? 배열에서 알려줌
   conn.end();
 
   if(rows.length==0){
@@ -20,7 +20,7 @@ router.post('/', async(req, res)=>{
   }
   else {
     const db_user=rows[0];
-    if(db_user.password==password){
+    if(db_user.user_password==password){
       result='반갑습니다.';
       req.session.userId=userId;//req.session.는 정해져 있는 것, userId부분은 내가 정하는 것(변수 하나 지정, 변수 호출)
     }

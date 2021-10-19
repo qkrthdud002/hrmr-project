@@ -17,12 +17,20 @@ html
       li 
         a(href='/main' width=200 height=200)
           h3 MAIN
-      li 
-        a(href='/login')
-          h3 LOGIN
-      li 
-        a(href='/register') 
-          h3 REGISTER
+
+      if userId=='NULL'
+        li 
+          a(href='/login')
+            h3 LOGIN
+        li 
+          a(href='/register') 
+            h3 REGISTER
+      
+      else
+        li 
+          a(href='logout')
+            h3 LOGOUT
+      
       li 
         a(href='/newtodolist') 
           h3 NEWTODOLIST

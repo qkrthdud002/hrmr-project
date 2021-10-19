@@ -10,6 +10,7 @@ a {
 .login-label{
   font-size: 17px;
   color:grey;
+  margin-right:0.5rem;
 }
 
 .login-center{

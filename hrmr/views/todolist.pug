@@ -7,6 +7,9 @@ block content
   br
   br
   br
+  //- each todo in todolist 
+  //-   input(type="checkbox" class="checkboxsize")
+  //-   input(type="text" name="title", class="todo" value=todo.title)
   input(type="checkbox" class="checkboxsize")
   input(type="text" name="todolist1" class="todo")
   br
@@ -34,11 +37,18 @@ block content
   br
   br
   br
-  input(type="button" class = "todobutton")
+  //- p(class="buttons")
+  //-   button(class="button is-small")
+  //-   span(class="icon")
+  //-     i(class="fas fa-plus")
 
     //-<button type="button">
     //-<img src="/images/todobutton.png" alt="이미지 없음">
-   
+  p(class="buttons")
+  button(class="button")
+    span(class="icon")
+      i(class="fas fa-plus")
+  
    
   //-input(button type="button is-small" name="todobutton" id="todobutton")
   

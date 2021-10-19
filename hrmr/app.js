@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session=require('express-session');
 
 var indexRouter = require('./routes/index');
 var countdownRouter = require('./routes/countdown');
@@ -11,7 +12,8 @@ var newtodoRouter = require('./routes/newtodo');
 var registerRouter = require('./routes/register');
 var stopwatchRouter = require('./routes/stopwatch');
 var todolistRouter = require('./routes/todolist');
-var mainRouter = require('./routes/main')
+var mainRouter = require('./routes/main');
+var logoutRouter = require('./routes/logout')
 
 var app = express();
 
@@ -25,9 +27,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  secret:'hrmr',//보안
+  resave:false,
+  saveUninitialized:true//익명
+}));
+
 app.use('/', indexRouter);
 app.use('/main', mainRouter);
 app.use('/login', loginRouter);
+app.use('/logout',logoutRouter);
 app.use('/register', registerRouter);
 app.use('/todolist', todolistRouter);
 app.use('/newtodo', newtodoRouter);

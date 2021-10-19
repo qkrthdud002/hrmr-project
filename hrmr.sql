@@ -17,15 +17,25 @@
 CREATE DATABASE IF NOT EXISTS `hrmr` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */;
 USE `hrmr`;
 
+-- 테이블 hrmr.time_record 구조 내보내기
+CREATE TABLE IF NOT EXISTS `time_record` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `todo_id` int(11) DEFAULT NULL,
+  `strat_time` datetime DEFAULT NULL,
+  `end_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`record_id`) USING BTREE,
+  KEY `FK__todo` (`todo_id`) USING BTREE,
+  CONSTRAINT `FK__todo` FOREIGN KEY (`todo_id`) REFERENCES `todo` (`todo_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 내보낼 데이터가 선택되어 있지 않습니다.
+
 -- 테이블 hrmr.todo 구조 내보내기
 CREATE TABLE IF NOT EXISTS `todo` (
   `todo_id` int(11) NOT NULL AUTO_INCREMENT,
-  `body` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
-  `start_date` date NOT NULL,
-  `end_date` date NOT NULL,
-  `timer_type` int(11) NOT NULL DEFAULT 0,
+  `todo_text` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
+  `todo_date` date NOT NULL,
   `finished` tinyint(4) NOT NULL DEFAULT 0,
-  `time_info` int(11) NOT NULL DEFAULT 0,
   `user_id` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`todo_id`),
   KEY `FK__user_information` (`user_id`),

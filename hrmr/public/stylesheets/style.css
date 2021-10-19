@@ -33,6 +33,14 @@ a {
   color: black;
 }
 
+.login-image{
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .login-register-center{
   text-align: center;
 }

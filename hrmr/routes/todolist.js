@@ -25,9 +25,9 @@ router.get('/', async (req, res)=> {
 router.post('/', async (req, res)=>{
   const {todoId, todotext}=req.body;
   const conn = await dbcp.getConnection();
-  const rows = await conn.query(
-    'INSERT INTO todo (todoId, todotext) VALUES ('Company Inc', 'Highway 37')'
-  );
+  //const rows = await conn.query(
+    //'INSERT INTO todo (todoId, todotext) VALUES ('Company Inc', 'Highway 37')'
+  //);
   conn.end();
   res.json({result:'ok'});
 });
@@ -41,7 +41,6 @@ router.put('/:todoId', async (req, res)=>{
 // 할일 삭제 
 router.delete('/:todoId', async (req, res)=>{
   const todoId = req.params.todoId;
-  todo
   res.json({result:'ok'});
 });
 

@@ -8,7 +8,7 @@
     border: none;
 }
 
-.button-submit:active {
+#submitBtn:active {
     background-color: grey;
     border-color: black;
     color: rgb(255, 199, 0);

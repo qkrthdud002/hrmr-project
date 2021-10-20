@@ -16,7 +16,10 @@ block content
                         span :
                         span#seconds 00
                     div(class="stopwatch_buttons")
-                        button(class='stopwatch_button') 시작
-                        //button(class='stopwatch_button') 일시중지
-                        button(class='stopwatch_button') 종료
-    div(class="laps")
+                        button(class='stopwatch_button_start') 시작
+                        button(class='stopwatch_button_stop') 종료
+    script.
+        const startButton = document.getElementsByClassName("start")[0];
+        const start = () => {
+            
+        }

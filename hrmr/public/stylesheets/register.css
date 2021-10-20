@@ -6,6 +6,7 @@
 #submitBtn{
     background-color:rgb(255, 199, 0);
     border: none;
+    border-radius: 8px;
 }
 
 #submitBtn:active {
@@ -13,7 +14,6 @@
     border-color: black;
     color: rgb(255, 199, 0);
 }
-
 
 .register-center{
     margin: auto;

@@ -5,19 +5,20 @@ var db = require('../model/dbcp');
 /* GET home page. */
 router.get('/', async (req, res)=> {
   const query_date = req.query.date;
+  const conn = await db.getConnection();
   let today = new Date();
   if(query_date==undefined){
     //query_date에 오늘 날짜 저장.
-    query_date = today;
-  }
 
+  }
   //DB에서 주어진 날짜의 todo list조회
   
-
-
+  conn.query('select todo_date from todo');
+  
   // DB에서 주어진 날짜의 time_reoced 조회
+  
 
-
+  conn.end();
   res.render('todolist');
 });
 

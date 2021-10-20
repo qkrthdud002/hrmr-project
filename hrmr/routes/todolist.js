@@ -41,6 +41,8 @@ router.put('/:todoId', async (req, res)=>{
 // 할일 삭제 
 router.delete('/:todoId', async (req, res)=>{
   const todoId = req.params.todoId;
+  const conn = await dbcp.getConnection();
+  conn.query(`DELETE FROM todo WHERE todo_id=${todoId}`)
   res.json({result:'ok'});
 });
 

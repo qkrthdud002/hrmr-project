@@ -1,6 +1,11 @@
-.button-submint {
+/* .button-submint {
     background-color: rgb(255, 199, 0);
     color: black;
+} */
+
+#submitBtn{
+    background-color:rgb(255, 199, 0);
+    border: none;
 }
 
 .button-submit:active {
@@ -9,11 +14,11 @@
     color: rgb(255, 199, 0);
 }
 
+
 .register-center{
     margin: auto;
     width: 60%;
     height: 60%;
-  
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;

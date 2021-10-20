@@ -26,7 +26,7 @@ router.post('/', async (req, res)=>{
   const {todoId, todotext}=req.body;
   const conn = await dbcp.getConnection();
   const rows = await conn.query(
-    'INSERT INTO todo (todoId, todotext) VALUES ('Company Inc', 'Highway 37')'
+    'INSERT INTO todo (todoId, todotext) VALUES ()'
   );
   conn.end();
   res.json({result:'ok'});

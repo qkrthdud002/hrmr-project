@@ -13,7 +13,7 @@ router.get('/', async (req, res)=> {
   }
   //DB에서 주어진 날짜의 todo list조회
   
-  conn.query('select todo_date from todo');
+  
   
   // DB에서 주어진 날짜의 time_reoced 조회
   
@@ -36,7 +36,7 @@ router.post('/', async (req, res)=>{
 // 할일 수정 - 완료처리
 router.put('/:todoId', async (req, res)=>{
   const todoId = req.params.todoId;
-  
+
   res.json({result:'ok'});
 });
 

@@ -3,7 +3,7 @@ $(()=>{
         const userId = $('#userId').val();
         const password = $('#password').val();
         const passwordcheck = $('#passwordcheck').val();
-        if(userId==''){
+        if(userId === null){
             alert('아이디는 필수 항목입니다.');
             return;
         }

@@ -1,22 +1,15 @@
 extends layout
 
 block content
-    
     div(class="countdown_container")
         h2 COUNT DOWN 
         div(class="countdown_watch")
             div(class="countdown_outer_circle")
                 div(class="countdown_inner_circle")
                     h1(class="countdown_timer")
-                        span#hours 00
-                        span
-                        span :
-                        span#munutes 00
-                        span
-                        span :
-                        span#seconds 00
+                        h2 00:00
                     div(class="countdown_buttons")
                         button(class='countdown_button') 시작
                         button(class='countdown_button') 일시중지
                         button(class='countdown_button') 종료
-    div(class="countdown_laps")
+    div(class='countdown_laps')

@@ -1,9 +1,10 @@
 $(()=>{
-    $('#button-submit').on('click', ()=>{
+    $('#submitBtn').on('click', ()=>{
         const userId = $('#userId').val();
         const password = $('#password').val();
         const passwordcheck = $('#passwordcheck').val();
-        if(userId === null){
+
+        if(userId === ''){
             alert('아이디는 필수 항목입니다.');
             return;
         }

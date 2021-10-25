@@ -6,13 +6,14 @@ var db = require('../model/dbcp');
 router.get('/', async (req, res)=> {
   const query_date = req.query.date;
   const conn = await db.getConnection();
+  let today = new Date();
   if(query_date==undefined){
     //query_date에 오늘 날짜 저장.
-    query_date = new Date();
+
   }
   //DB에서 주어진 날짜의 todo list조회
   
-  
+  conn.query('select todo_date from todo');
   
   // DB에서 주어진 날짜의 time_reoced 조회
   
@@ -26,7 +27,7 @@ router.post('/', async (req, res)=>{
   const {todoId, todotext}=req.body;
   const conn = await dbcp.getConnection();
   const rows = await conn.query(
-    'INSERT INTO todo (todoId, todotext) VALUES ()'
+    `INSERT INTO todo (todoId, todotext) VALUES(${queryData})`
   );
   conn.end();
   res.json({result:'ok'});
@@ -35,7 +36,8 @@ router.post('/', async (req, res)=>{
 // 할일 수정 - 완료처리
 router.put('/:todoId', async (req, res)=>{
   const todoId = req.params.todoId;
-
+  const todotext = req.params.todotext;
+  
   res.json({result:'ok'});
 });
 

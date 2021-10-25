@@ -17,7 +17,6 @@ a {
   margin: auto;
   width: 60%;
   height: 60%;
-
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;

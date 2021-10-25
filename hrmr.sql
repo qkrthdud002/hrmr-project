@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `todo` (
   `todo_id` int(11) NOT NULL AUTO_INCREMENT,
   `todo_text` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
   `todo_date` date NOT NULL,
-  `finished` tinyint(4) NOT NULL DEFAULT 0,
+  `finished` tinyint(4) NOT NULL DEFAULT 0, 
   `user_id` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`todo_id`),
   KEY `FK__user_information` (`user_id`),

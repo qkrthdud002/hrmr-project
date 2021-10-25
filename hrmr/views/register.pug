@@ -4,16 +4,16 @@ block content
     img(class='login-image' src='../images/hrmr.png' width=200 height=200)
     div(style='line-height:1200%')
         br
-    div(class='register-center' class='login-box')
+    div(class='login-center' class='login-box')
         h1(class='login-h1') 회원가입
         br
         form(action='/register',method='post')
             label(for='userId', class='login-label') 아이디   
-            input(class='input is-medium' type='text', size="21", name='userId', id='userId', placeholder='ID')
+            input(class='input is-medium' type='text', size="26", name='userId', id='userId', placeholder='ID')
             br
             br
             lable(for='userpw', class='login-label') 비밀번호
-            input(class='input is-medium' type='password', size="19", name='password', id='userpw', placeholder='PASSWORD')
+            input(class='input is-medium' type='password', size="24", name='password', id='userpw', placeholder='PASSWORD')
             br
             br
             lable(for='userpw', class='login-label') 비밀번호 확인
@@ -24,3 +24,4 @@ block content
             br
     script(src='/javascripts/register.js')
     p= result
+    

@@ -37,7 +37,16 @@ router.post('/', async (req, res)=>{
 router.put('/:todoId', async (req, res)=>{
   const todoId = req.params.todoId;
   const todotext = req.params.todotext;
+  const rows = await conn.query('select todo_id from todo where todo_id=? user_id=?', [ todoId, userId ])//?표에 들어갈 것은 다음 명령어? 배열에서 알려줌
+
+  if(rows.length == 0) {
+    res.status(404).json({error: 'Unauthorized or Not found'})
+    return
+  }
+  const foundEntity = rows[0]
+  await conn.query('update todo set todo_text=? where todo_id=?', [todotext, todoId])
   
+  conn.end();
   res.json({result:'ok'});
 });
 

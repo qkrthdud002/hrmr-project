@@ -20,6 +20,17 @@ block content
                         button(class='stopwatch_button_stop') 종료
     script.
         const startButton = document.getElementsByClassName("start")[0];
+        const stopButton = document.gerElementsBtClassName("stop")[0];
+
+        let isstart = false
+
         const start = () => {
-            
+            if(!isstart) {
+                startButton.innerHTML = 'pause';
+                isstart = false;
+            }
+            else {
+                startButton.innerHTML = 'start';
+                isstart = true;
+            }
         }

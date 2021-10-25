@@ -6,8 +6,14 @@ router.get('/:todoId', async (req, res) => {
   const todoId=req.params.todoId;
 
   // db에서 주어진 todoId를 이용해 todo정보 조회
-  const todo={todoId:todoId, todo_text:'국어'}; //바꾸기
-  res.render('stopwatch', {todo:todo});
+  const rows = await conn.query('select * from todo where todo_id=?',[todoId])
+  if(rows.length > 0){
+    const todo = rows[0]
+    res.render('stopwatch', {todo:todo});
+  }
+  else {
+    res.render('stopwatch')
+  }
 });
 
 router.post('/:todoId', async (req, res)=>{

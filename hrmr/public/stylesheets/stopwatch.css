@@ -39,7 +39,7 @@
 
 .stopwatch_buttons {
     display: 250px;
-    margin-top: 0px;
+    margin-top: 40px;
     display: flex;
     justify-content: space-between;
     margin-left: 26px;
@@ -83,7 +83,7 @@
     background-color:rgb(255, 199, 0);
 }
 
-h2 {
+h2_stopwatch {
     font-size: 50px;
     text-align: center;
     margin-bottom: 50px;

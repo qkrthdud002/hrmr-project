@@ -2,7 +2,7 @@ extends layout
 
 block content
     div(class="countdown_container")
-        h2 COUNT DOWN 
+        h2(class='title is-2') COUNT DOWN 
         div(class="countdown_watch")
             div(class="countdown_outer_circle")
                 div(class="countdown_inner_circle")
@@ -22,8 +22,10 @@ block content
                         li 초 
                             input(type='text' id='target_sec' class='countdpwn_sec')
                             br
+                            br
                             h1(class="countdown_timer")
-                                h2(id='time') 00:00:00
+                                h2(class='title is-2' id='time') 00:00:00
+                            br
 
                     div(class="countdown_buttons")
                         button(class='countdown_button' id='start') 시작

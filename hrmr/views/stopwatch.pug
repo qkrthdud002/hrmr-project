@@ -1,13 +1,14 @@
 extends layout
 
 block content
-    
+    script(src='/javascripts/stopwatch.js')
+    input(type='hidden' id='start_time')
     div(class="stopwatch_container")
-        h2 STOP WATCH
+        h2(class='title is-2') STOP WATCH
         div(class="stopwatch_watch")
             div(class="outer_circle")
                 div(class="inner_circle")
-                    h1(class="stopwatch_timer")
+                    p(class="stopwatch_timer")
                         span#hours 00
                         span
                         span :
@@ -16,8 +17,8 @@ block content
                         span :
                         span#seconds 00
                     div(class="stopwatch_buttons")
-                        button(class='stopwatch_button_start') 시작
-                        button(class='stopwatch_button_stop') 종료
+                        button(class='stopwatch_button_start' id='start') 시작
+                        button(class='stopwatch_button_stop' id='end') 종료
     script.
         const startButton = document.getElementsByClassName("start")[0];
         const stopButton = document.gerElementsBtClassName("stop")[0];

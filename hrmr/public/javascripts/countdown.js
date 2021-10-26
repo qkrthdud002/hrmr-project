@@ -1,6 +1,6 @@
 $(()=>{
     $('#start').on('click', ()=>{
-        const target = $('#target_time').val();
+        const target = $('#target_hour').val();
         $('#time').text(target);
     });
 });

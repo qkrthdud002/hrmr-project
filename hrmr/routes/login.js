@@ -23,6 +23,7 @@ router.post('/', async(req, res)=>{
     if(db_user.user_password==password){
       result='반갑습니다.';
       req.session.userId=userId;//req.session.는 정해져 있는 것, userId부분은 내가 정하는 것(변수 하나 지정, 변수 호출)
+      res.redirect('/todolist');
     }
     else
       result='비밀번호 오류입니다.';

@@ -1,7 +1,8 @@
 extends layout
 
 block content
-    
+    script(src='/javascripts/stopwatch.js')
+    input(type='hidden' id='start_time')
     div(class="stopwatch_container")
         h2 STOP WATCH
         div(class="stopwatch_watch")
@@ -16,21 +17,21 @@ block content
                         span :
                         span#seconds 00
                     div(class="stopwatch_buttons")
-                        button(class='stopwatch_button_start') 시작
-                        button(class='stopwatch_button_stop') 종료
-    script.
-        const startButton = document.getElementsByClassName("start")[0];
-        const stopButton = document.gerElementsBtClassName("stop")[0];
+                        button(class='stopwatch_button_start' id='start') 시작
+                        button(class='stopwatch_button_stop' id='end') 종료
+    //- script.
+    //-     const startButton = document.getElementsByClassName("start")[0];
+    //-     const stopButton = document.gerElementsBtClassName("stop")[0];
 
-        let isstart = false
+    //-     let isstart = false
 
-        const start = () => {
-            if(!isstart) {
-                startButton.innerHTML = 'Pause';
-                isstart = false;
-            }
-            else {
-                startButton.innerHTML = 'start';
-                isstart = true;
-            }
-        }
+    //-     const start = () => {
+    //-         if(!isstart) {
+    //-             startButton.innerHTML = 'Pause';
+    //-             isstart = false;
+    //-         }
+    //-         else {
+    //-             startButton.innerHTML = 'start';
+    //-             isstart = true;
+    //-         }
+    //-     }

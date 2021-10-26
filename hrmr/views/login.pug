@@ -3,7 +3,9 @@ extends layout
 block content 
     img(class='login-image' src='../images/hrmr.png' width=200 height=200)
     div(style='line-height:1200%')
-        br
+    br
+    br
+    br
     div(class='login-center' class='login-box')
         h1(class='login-h1') 로그인
         br
@@ -20,7 +22,9 @@ block content
             br
         a(href='/register' class='login-register-center', font-size = 13) 회원가입  
 
-    p=result
+    br
+    br
+    p(class='login-p')=result
 
     //if (result!=null && result!='')
     //    div(class='modal')

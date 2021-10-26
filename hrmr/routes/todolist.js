@@ -43,7 +43,7 @@ router.post('/', async (req, res)=>{
 router.put('/:todoId', async (req, res)=>{
   const todoId = req.params.todoId;
   const todotext = req.params.todotext;
-  const rows = await conn.query('select todo_id from todo where todo_id=? and user_id=?', [ todoId, userId ])//?표에 들어갈 것은 다음 명령어? 배열에서 알려줌
+  const rows = await conn.query('select * from todo where todo_id=? and user_id=?', [ todoId, userId ])//?표에 들어갈 것은 다음 명령어? 배열에서 알려줌
 
   if(rows.length == 0) {
     res.status(403).json({error: 'Unauthorized or Not found'})

@@ -6,11 +6,24 @@ block content
         div(class="countdown_watch")
             div(class="countdown_outer_circle")
                 div(class="countdown_inner_circle")
-                    label 시
-                    input(type='text' id='target_time' class='countdpwn_time')
-                    br
-                    h1(class="countdown_timer")
-                        h2(id='time') 00:00
+                    ul 
+                        li 시 
+                            input(type='text' id='target_time' class='countdpwn_time')
+                            br
+                            br
+                            //- h1(class="countdown_timer")
+                            //-     h2(id='time') 00:00
+                        li 분 
+                            input(type='text' id='target_time' class='countdpwn_time')
+                            br
+                            br
+                            //- h1(class="countdown_timer")
+                            //-     h2(id='time') 00:00
+                        li 초 
+                            input(type='text' id='target_time' class='countdpwn_time')
+                            br
+                            h1(class="countdown_timer")
+                                h2(id='time') 00:00
 
                     div(class="countdown_buttons")
                         button(class='countdown_button' id='start') 시작

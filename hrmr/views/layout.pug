@@ -7,42 +7,29 @@ html
     link(rel='stylesheet', href='/stylesheets/todolist.css')
     link(rel='stylesheet', href='/stylesheets/stopwatch.css')
     link(rel='stylesheet', href='/stylesheets/main.css')
-    link(rel="stylesheet", href="./stylesheets/register.css")
+    link(rel="stylesheet", href="/stylesheets/register.css")
+    link(rel='stylesheet', href="/stylesheets/bulma.min.css")
     script(src='https://code.jquery.com/jquery-3.6.0.min.js', integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=', crossorigin='anonymous')
     script(defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js")
   body
-  div(class='main-screen')
-    br
-    br
-    ul 
-      li 
-        a(href='/main' width=200 height=200)
-          h3 MAIN
+    nav(class='navbar is-warning' role='navigation' aria-lable='main navigation')
+      div(class='navbar-brand')
+        a(class='navbar-item')
+          img(src='../images/hrmr.png' width=50 height=100)
 
-      if userId=='NULL'
-        li 
-          a(href='/login')
-            h3 LOGIN
-        li 
-          a(href='/register') 
-            h3 REGISTER
-      
-      else
-        li 
-          a(href='logout')
-            h3 LOGOUT
-      
-      li 
-        a(href='/newtodolist') 
-          h3 NEWTODOLIST
-      li
-        a(href='/countdown') 
-          h3 COUNTDOWN
-      li 
-        a(href='/stopwatch') 
-          h3 STOPWATCH
-  div(class="todolist03")
-    ul
-      a(href='/todolist') 
-        h3 TODOLIST
-block content
+      div(class='navbar-menu')
+        div(class='navbar-start')
+          a(class='navbar-item' href='/main') MAIN
+          a(class='navbar-item' href='/todolist') TODOLIST
+          a(class='navbar-item' href='/newtodolist') NEWTODOLIST
+          a(class='navbar-item' href='/countdown')  COUNTDOWN
+          a(class='navbar-item' href='/stopwatch') STOPWATCH
+
+        div(class='navbar-end')
+          if userId=='NULL'
+            a(class='navbar-item' class='buttons' href='/login') LOGIN
+            a(class='navbar-item' class='buttons' href='/register') REGISTER
+          else
+            a(class='navbar-item' href='/logout') LOGOUT
+
+    block content

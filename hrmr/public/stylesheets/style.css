@@ -87,3 +87,9 @@ a {
   border-top-width:0;
   border-bottom-width:0;
 }
+
+.login-p{
+  text-align: center;
+  color: rgb(191, 0, 0);
+  font-weight: bold;
+}

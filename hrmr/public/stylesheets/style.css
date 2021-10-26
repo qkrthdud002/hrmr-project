@@ -93,3 +93,8 @@ a {
   color: rgb(191, 0, 0);
   font-weight: bold;
 }
+
+.index-font{
+  font-weight: bold;
+  font-size:25px;
+}

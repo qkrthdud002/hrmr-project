@@ -6,20 +6,27 @@ var db = require('../model/dbcp');
 router.get('/', async (req, res)=> {
   const query_date = req.query.date;
   const conn = await db.getConnection();
+  const userId = req.session.userId;
+  if(userId==null || userId == undefined){
+    res.render('todolist');
+    return;
+  }
+
   let today = new Date();
   if(query_date==undefined){
     //query_date에 오늘 날짜 저장.
-
+    new Date();
+    query_date = today;
   }
   //DB에서 주어진 날짜의 todo list조회
-  
-  conn.query('select todo_date from todo');
+  const todolist = await conn.query('select * from todo where todo_date=?', todoId);
   
   // DB에서 주어진 날짜의 time_reoced 조회
-  
+  const recordlist=await conn.query('select * from time_record where date(start_time)=?');
+  //await conn.query('update todo set date=? where time_record=?', [timeRecord])
 
   conn.end();
-  res.render('todolist');
+  res.render('todolist', {todolist: recordlist});
 });
 
 // 할일 등록 

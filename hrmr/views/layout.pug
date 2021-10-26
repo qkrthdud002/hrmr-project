@@ -25,9 +25,9 @@ html
           a(class='navbar-item' href='/stopwatch') STOPWATCH
 
         div(class='navbar-end')
-          if userId=='NULL'
-            a(class='navbar-item' class='buttons' href='/login') LOGIN
-            a(class='navbar-item' class='buttons' href='/register') REGISTER
+          if userId==NULL
+            a(class='navbar-item' href='/login') LOGIN
+            a(class='navbar-item' href='/register') REGISTER
           else
             a(class='navbar-item' href='/logout') LOGOUT
 

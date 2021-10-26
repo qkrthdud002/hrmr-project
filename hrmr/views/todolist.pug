@@ -3,55 +3,55 @@ extends layout
 block content 
   div(class="Todotitle")
     p Todo
-  input(type="date", name="todaysdate" class="todaydate")
-  br
-  br
-  br
-  //- each todo in todolist 
-  //-   input(type="checkbox" class="checkboxsize")
-  //-   input(type="text" name="title", class="todo" value=todo.title)
-  input(type="checkbox" class="checkboxsize")
-  input(type="text" name="todolist1" class="todo")
-  br
-  br
-  br
-  //- label.a-checkbox
-  input(type="checkbox" class="checkboxsize")
-  //-input(type="checkbox" checked=true)
-  input(type="text" name="todolist2" class="todo")
-  br
-  br
-  br
-  input(type="checkbox" class="checkboxsize")
-  input(type="text" name="todolist3" class="todo")
-  br
-  br
-  br
-  input(type="checkbox" class="checkboxsize")
-  input(type="text" name="todolist4" class="todo")
-  br
-  br
-  br
-  input(type="checkbox" class="checkboxsize")
-  input(type="text" name="todolist5" class="todo")
-  br
-  br
-  br
-  //- p(class="buttons")
-  //-   button(class="button is-small")
-  //-   span(class="icon")
-  //-     i(class="fas fa-plus")
+      input(type="date", name="todaysdate" class="todaydate")
+    br
+    br
+    br
+    //- each todo in todolist 
+    //-   input(type="checkbox" class="checkboxsize")
+    //-   input(type="text" name="title", class="todo" value=todo.title)
+    input(type="checkbox" class="checkboxsize")
+    input(type="text" name="todolist1" class="todo")
+    br
+    br
+    br
+    //- label.a-checkbox
+    input(type="checkbox" class="checkboxsize")
+    //-input(type="checkbox" checked=true)
+    input(type="text" name="todolist2" class="todo")
+    br
+    br
+    br
+    input(type="checkbox" class="checkboxsize")
+    input(type="text" name="todolist3" class="todo")
+    br
+    br
+    br
+    input(type="checkbox" class="checkboxsize")
+    input(type="text" name="todolist4" class="todo")
+    br
+    br
+    br
+    input(type="checkbox" class="checkboxsize")
+    input(type="text" name="todolist5" class="todo")
+    br
+    br
+    br
+    //- p(class="buttons")
+    //-   button(class="button is-small")
+    //-   span(class="icon")
+    //-     i(class="fas fa-plus")
 
-    //-<button type="button">
-    //-<img src="/images/todobutton.png" alt="이미지 없음">
-  p(class="buttons")
-  button(class="button")
-    span(class="icon")
-      i(class="fas fa-plus")
-  
-   
-  //-input(button type="button is-small" name="todobutton" id="todobutton")
-  
-  vr
+      //-<button type="button">
+      //-<img src="/images/todobutton.png" alt="이미지 없음">
+    p(class="buttons")
+    button(class="button")
+      span(class="icon")
+        i(class="fas fa-plus")
+    
+    
+    //-input(button type="button is-small" name="todobutton" id="todobutton")
+    
+    vr
 
-script(src='/javascripts/register.js')
+  script(src='/javascripts/todolist.js')

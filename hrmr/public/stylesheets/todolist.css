@@ -27,10 +27,6 @@ div.Todotitle{
     width:30px;
     height:30px;
 }
-/* .todobutton{
-    width:30%;
-    height:30%;
-} */
 pattern{
     background: repeating-linear-gradient(90deg, #444 10px, #888 0, #888 20px);
     background: repeating-linear-gradient(#444, #444 10px, #888 0, #888 20px);
@@ -39,12 +35,6 @@ pattern{
     width:30px;
     height:30px;
 }
-vr{
-    display:block;
-    width:0.3%;
-    background-color: black;
-    position:absolute;
-    top:80%;
-    bottom:-65%;
-    right:44%;
+.button>h3{
+    border:"text-decoration:underline";
 }

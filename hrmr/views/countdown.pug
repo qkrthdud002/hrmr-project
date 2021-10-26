@@ -6,10 +6,16 @@ block content
         div(class="countdown_watch")
             div(class="countdown_outer_circle")
                 div(class="countdown_inner_circle")
+                    label 시
+                    input(type='text' id='target_time')
+                    br
                     h1(class="countdown_timer")
-                        h2 00:00
+                        h2(id='time') 00:00
+
                     div(class="countdown_buttons")
-                        button(class='countdown_button') 시작
-                        button(class='countdown_button') 일시중지
-                        button(class='countdown_button') 종료
+                        button(class='countdown_button' id='start') 시작
+                        button(class='countdown_button' id='pause') 일시중지
+                        button(class='countdown_button' id='stop') 종료
     div(class='countdown_laps')
+
+    script(src='/javascripts/countdown.js')

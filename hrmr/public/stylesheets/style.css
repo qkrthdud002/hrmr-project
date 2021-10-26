@@ -94,7 +94,18 @@ a {
   font-weight: bold;
 }
 
+.index-font-hrmr{
+  font-weight: bold;
+  font-size:27px;
+  text-decoration: overline underline rgb(250, 211, 71);
+  text-underline-position: under;
+}
+
 .index-font{
   font-weight: bold;
-  font-size:25px;
+  font-size:20px;
+}
+
+.index-font-h1{
+  font-weight: bold;
 }

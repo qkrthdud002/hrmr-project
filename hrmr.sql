@@ -21,7 +21,7 @@ USE `hrmr`;
 CREATE TABLE IF NOT EXISTS `time_record` (
   `record_id` int(11) NOT NULL AUTO_INCREMENT,
   `todo_id` int(11) DEFAULT NULL,
-  `strat_time` datetime DEFAULT NULL,
+  `start_time` datetime DEFAULT NULL,
   `end_time` datetime DEFAULT NULL,
   PRIMARY KEY (`record_id`) USING BTREE,
   KEY `FK__todo` (`todo_id`) USING BTREE,

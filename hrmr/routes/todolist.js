@@ -19,12 +19,11 @@ router.get('/', async (req, res)=> {
     query_date = today;
   }
   //DB에서 주어진 날짜의 todo list조회
-  const todolist = await conn.query('select * from todo where todo_date=?', todoId);
+  const todolist = await conn.query('select * from todo where todo_date=? and user_id=?', [todo_date, user_id]);
   
   // DB에서 주어진 날짜의 time_reoced 조회
-  const recordlist=await conn.query('select * from time_record where date(start_time)=?');
-  //await conn.query('update todo set date=? where time_record=?', [timeRecord])
-
+  const recordlist=await conn.query('select * from time_record where date(start_time)=? and user_id=?' [date, user_id]);
+  
   conn.end();
   res.render('todolist', {todolist: recordlist});
 });

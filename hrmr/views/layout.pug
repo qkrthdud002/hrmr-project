@@ -14,22 +14,27 @@ html
   body
     nav(class='navbar is-warning mb-4' role='navigation' aria-lable='main navigation')
       div(class='navbar-brand')
-        a(class='navbar-item')
-          img(src='../images/hrmr.png' width=50 height=100)
+        a(class='navbar-item' href='/')
+          img(src='../images/hrmr.png' width=30 height=100)
 
       div(class='navbar-menu')
         div(class='navbar-start')
           a(class='navbar-item' href='/main') MAIN
           a(class='navbar-item' href='/todolist') TODOLIST
-          a(class='navbar-item' href='/newtodolist') NEWTODOLIST
           a(class='navbar-item' href='/countdown')  COUNTDOWN
           a(class='navbar-item' href='/stopwatch') STOPWATCH
 
         div(class='navbar-end')
-          if userId=='NULL'
-            a(class='navbar-item' class='buttons' href='/login') LOGIN
-            a(class='navbar-item' class='buttons' href='/register') REGISTER
+          if userId==NULL
+            a(class='navbar-item' href='/login') LOGIN
+            a(class='navbar-item' href='/register') REGISTER
           else
             a(class='navbar-item' href='/logout') LOGOUT
+
+    br
+    br
+    br
+    br
+    br
 
     block content

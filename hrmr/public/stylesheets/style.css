@@ -49,6 +49,11 @@ a {
   width:100%;
 }
 
+.login-register-center:hover {
+  color: rgb(255, 199, 0);
+  text-decoration: underline;
+}
+
 /* .checkboxsize{
   float: left;
   width:30px;

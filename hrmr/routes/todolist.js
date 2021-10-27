@@ -28,10 +28,25 @@ router.get('/', auth, async (req, res)=> {
 
     //2. var str = dt.getYear()+'-'+(dt.getMonth()+1)+'-'+dt.Date();
 
-    var month = dt.getMonth()+1;
-    var day = dt.getDate();
-    var year = dt.getFullYear();
+    //3. var month = dt.getMonth()+1;
+    // var day = dt.getDate();
+    // var year = dt.getFullYear();
     //document.write(month + '-' + day + '-' + year);
+
+    
+    //function getCurrentDate()
+    //{
+    var date = new Date();
+    var year = date.getFullYear().toString();
+
+    var month = date.getMonth() + 1;
+    month = month < 10 ? '0' + month.query_date() : month.query_date();
+
+    var day = date.getDate();
+    day = day < 10 ? '0' + day.query_date() : day.query_date();
+
+    return year + '-'+ month + '-'+ day ;
+    //}
   }
   //DB에서 주어진 날짜의 todo list조회
   const todolist = await conn.query('select * from todo where todo_date=? and user_id=?', [query_date, userId]);

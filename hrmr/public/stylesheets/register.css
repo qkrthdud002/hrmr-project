@@ -17,7 +17,7 @@
 
 .register-center {
     margin: auto;
-    width: 47%;
+    width: 40%;
     height: 60%;
     display: flex;
     flex-flow: column nowrap;

@@ -1,9 +1,10 @@
 var express = require('express');
+const auth = require('./interceptor');
 const { off, response } = require('../app');
 var router = express.Router();
 
 /* GET home page. */
-router.get(['/','/:todoId'], async (req, res) => {
+router.get(['/','/:todoId'], auth, async (req, res) => {
   const todoId=req.params.todoId;
   if(todoId==null || todoId==undefined){
     res.render('stopwatch');

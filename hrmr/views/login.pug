@@ -1,7 +1,7 @@
 extends layout
 
 block content 
-    img(class='login-image' src='../images/hrmr.png' width=200 height=200)
+    img(class='login-image' src='../images/hrmr.png' width=210 height=210)
     div(style='line-height:1200%')
     br
     br
@@ -11,17 +11,17 @@ block content
         h1(class='login-h1') 로그인
         br
         form(action='/login',method='post')
-            label(for='userId', class='login-label') 아이디   
-            input(class='input is-small' type='text', size="21", name='userId', id='userId', placeholder='ID')
+            label(for='userId', class='login-label', class="field-label is-normal") 아이디   
+            input(class='input is-normal' type='text', size="21", name='userId', id='userId', placeholder='ID')
             br
             br
             lable(for='userpw', class='login-label') 비밀번호
-            input(class='input is-small' type='password', size="19", name='password', id='userpw', placeholder='PASSWORD')
+            input(class='input is-normal' type='password', size="19", name='password', id='userpw', placeholder='PASSWORD')
             br
             br
-            input(type='submit', value='로그인', style='display:block; width:100%; text-align:center; font-size:0.8em; padding:7px; backgound-color:',id ="submitBtn", class='remove-line')
+            input(type='submit', value='로그인', style='display:block; width:100%; text-align:center; font-size:1.1em; padding:7px; backgound-color:',id ="submitBtn", class='remove-line')
             br
-        a(href='/register' class='login-register-center', font-size = 13) 회원가입  
+        a(href='/register' class='login-register-center' class='login-font-size') 회원가입  
         br
 
     br

@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../model/dbcp');
+const auth=require('./interceptor');
 
 /* GET home page. */
-router.get('/', async (req, res)=> {
+router.get('/', auth, async (req, res)=> {
   const query_date = req.query.date;
   const conn = await db.getConnection();
   const userId = req.session.userId;

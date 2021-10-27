@@ -11,8 +11,8 @@ block content
     //-   input(type="checkbox" class="checkboxsize")
     //-   input(type="text" name="title", class="todo" value=todo.title)
   div(class="todo")
-  input(type="checkbox" class="checkboxsize")
-  input(type="text" name="todolist1" class="todo")
+    input(type="checkbox" class="checkboxsize")
+    input(type="text" name="todolist1" class="todo")
   br
   br
   br
@@ -31,9 +31,14 @@ block content
   div(class="todoplus" style="margin-left:3em; margin-bottom:2em;")
     h3 할 일 추가
     
-  script(src="https://cdn.amcharts.com/lib/4/core.js")
-  script(src="https://cdn.amcharts.com/lib/4/charts.js")
-  script(src="https://cdn.amcharts.com/lib/4/plugins/timeline.js")
-  script(src="https://cdn.amcharts.com/lib/4/plugins/bullets.js")
-  script(src="https://cdn.amcharts.com/lib/4/themes/animated.js")
+  script(src="https://www.amcharts.com/lib/3/amcharts.js")
+  script(src="https://www.amcharts.com/lib/3/serial.js")
+  script(src="https://www.amcharts.com/lib/3/themes/light.js")
+  script(src="https://www.amcharts.com/lib/3/gantt.js")
+  script(src="/javascripts/todolist.js")
   div(id="chartdiv")
+  div(style="text-align: center;")
+    input(type="button" value="1" onclick="setPageData(0);")
+    input(type="button" value="2" onclick="setPageData(1);")
+    input(type="button" value="3" onclick="setPageData(2);")
+    input(type="button" value="4" onclick="setPageData(3);")

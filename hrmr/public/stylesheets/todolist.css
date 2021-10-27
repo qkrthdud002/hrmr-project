@@ -4,7 +4,9 @@
     border-right-width:0;
     border-top-width:0;
     border-bottom-width:1;
-    
+    outline:0px solid;
+    width:70%;
+    height: 50%;
 }
 .todaydate{
     /*width:200px;
@@ -14,12 +16,7 @@
     right:655px;
     top:650px;
 }
-.todo{
-    outline:0px solid;
-    width:52%;
-    height: 50%;
-}
-div.Todotitle{
+.Todotitle{
     font-size:130px;
     text-align: center;
 }
@@ -37,10 +34,5 @@ pattern{
 }
 #chartdiv {
     width: 100%;
-    height: 600px;
+    height: 200px;
   }
-  
-  .demo-theme-dark .demo-background {
-    background: #000;
-  }
-  

@@ -29,7 +29,7 @@ router.get('/', async (req, res)=> {
 });
 
 // 할일 등록 
-router.post('/', async (req, res)=>{
+router.post('/todolist', async (req, res)=>{
   const {todoId, todotext}=req.body;
   const conn = await dbcp.getConnection();
   const rows = await conn.query(

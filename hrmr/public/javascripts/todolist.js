@@ -312,7 +312,7 @@ $(()=>{
         "categoryField": "category",
         "segmentsField": "segments",
         "colorField": "color",
-        "startDate": "2015-01-01",
+        "startDate": "2021-10-27",
         "startField": "start",
         "endField": "end",
         "durationField": "duration",

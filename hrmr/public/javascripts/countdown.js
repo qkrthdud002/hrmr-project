@@ -11,6 +11,7 @@ $(()=>{
         let timernumber = window.setInterval(()=>{
             console.log(1)
             sec = sec - 1;
+            $('#time').text(hour + ':' + min + ':' + sec);
             if(min == 0 && hour != 0){
                 hour--;
                 min = 60;
@@ -20,11 +21,11 @@ $(()=>{
                 sec = 60;
             }
             else if(sec == 0 && min == 0 && hour == 0){
+                $('#time').text(hour + ':' + min + ':' + sec);
                 alert('끝.');
                 window.clearInterval(timernumber)
                 return;
             }
-            $('#time').text(hour + ':' + min + ':' + sec);
         }, 1000);
 
         $('#stop').on('click', ()=>{
@@ -32,11 +33,9 @@ $(()=>{
             alert('종료');
             return;
         });
-    });
-    $('#pause').on('click', ()=>{
         
+        $('#pause').on('click', ()=>{
+        
+        });
     });
-
-
-
 });

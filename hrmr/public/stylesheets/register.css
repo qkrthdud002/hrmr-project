@@ -3,7 +3,7 @@
     color: black;
 } */
 
-#submitBtn{
+#submitBtn {
     background-color:rgb(255, 199, 0);
     border: none;
     border-radius: 8px;
@@ -15,7 +15,7 @@
     color: rgb(255, 199, 0);
 }
 
-.register-center{
+.register-center {
     margin: auto;
     width: 45%;
     height: 60%;
@@ -23,4 +23,4 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-  }
+}

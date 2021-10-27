@@ -26,7 +26,7 @@ router.get('/', auth, async (req, res)=> {
   const recordlist=await conn.query('select * from time_record where date(start_time)=? and user_id=?' [date, user_id]);
   
   conn.end();
-  res.render('todolist', {todolist: recordlist});
+  res.render('todolist', {todolist: recordlist, userId:req.session.userId});
 });
 
 // 할일 등록 

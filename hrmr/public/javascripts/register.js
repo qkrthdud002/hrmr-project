@@ -24,10 +24,12 @@ $(()=>{
             data:JSON.stringify(data)
         })
         .done((response)=>{
+            console.log(response);
             alert(response.result);
         })
-        .fail((err)=>{
-            alert(err.boom);
+        .fail((request, status, err)=>{
+            const msg = JSON.parse(request.responseText);
+            alert(msg.boom);
         });
     });
 });

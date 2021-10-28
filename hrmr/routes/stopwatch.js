@@ -1,6 +1,5 @@
 var express = require('express');
 const auth = require('./interceptor');
-const { off, response } = require('../app');
 var router = express.Router();
 
 /* GET home page. */

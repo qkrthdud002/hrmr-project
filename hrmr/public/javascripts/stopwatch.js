@@ -33,6 +33,12 @@ $(()=>{
     }
 
     $('#end').on('click', ()=>{
+        let time = new Date();
+
+        let hours = time.gethours();
+        let minutes = time.getminutes();
+        let seconds = time.getseconds();
+        document.write(hours+':'+minutes+':'+seconds);
         clearInterval(intervalId)
         seconds = 0; minutes = 0; hours = 0;
         appendminutes.textContent = "00"

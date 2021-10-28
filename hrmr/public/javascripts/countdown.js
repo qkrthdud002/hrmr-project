@@ -37,6 +37,7 @@ $(()=>{
         }, 1000);
 
         $('#stop').on('click', ()=>{
+            $('#time').text(String(hour).padStart('00') + ":" + String(min).padStart('00') + ":" + String(sec).padStart('00'));
             window.clearInterval(timernumber)
             alert('종료');
             return;

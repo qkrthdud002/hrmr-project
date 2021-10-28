@@ -17,7 +17,6 @@ $(()=>{
             userId:userId,
             password:password
         }
-        
         $.ajax({
             url:'/register',
             type:'post',

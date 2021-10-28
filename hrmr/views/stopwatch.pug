@@ -12,26 +12,10 @@ block content
                         span#hours 00
                         span
                         span :
-                        span#munutes 00
+                        span#minutes 00
                         span
                         span :
                         span#seconds 00
                     div(class="stopwatch_buttons")
                         button(class='stopwatch_button_start' id='start') 시작
                         button(class='stopwatch_button_stop' id='end') 종료
-    script.
-        const startButton = document.getElementsByClassName("start")[0];
-        const stopButton = document.gerElementsBtClassName("stop")[0];
-
-        let isstart = false
-
-        const start = () => {
-            if(!isstart) {
-                startButton.innerHTML = 'Pause';
-                isstart = false;
-            }
-            else {
-                startButton.innerHTML = 'start';
-                isstart = true;
-            }
-        }

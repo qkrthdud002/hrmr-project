@@ -25,12 +25,33 @@ block content
     //-p(class="buttons")
   
     //-h4 할 일 추가
-  button(class="button")
-    span(class="icon")
-      i(class="fas fa-plus")
-  div(class="todoplus" style="margin-left:3em; margin-bottom:2em;")
-    h3 할 일 추가
-    
+  div(class="midde")
+    button(class="button")
+      span(class="icon")
+        i(class="fas fa-plus")
+    div(class="todoplus" style="margin-left:10px; margin-bottom:2em; display: flex; ")
+      h3 할 일 추가
+      
+    table(id="calendar")
+      thead 
+        tr 
+          td 
+            input(type="button" value="<")
+          td(colspan="3")
+            year-month 
+          td 
+            input(type="button" value=">")
+      tbody 
+        tr 
+          td 일
+          td 월
+          td 화
+          td 수
+          td 목
+          td 금
+          td 토
+
+
   script(src="https://www.amcharts.com/lib/3/amcharts.js")
   script(src="https://www.amcharts.com/lib/3/serial.js")
   script(src="https://www.amcharts.com/lib/3/themes/light.js")
@@ -42,3 +63,4 @@ block content
   //-   input(type="button" value="2" onclick="setPageData(1);")
   //-   input(type="button" value="3" onclick="setPageData(2);")
   //-   input(type="button" value="4" onclick="setPageData(3);")
+  

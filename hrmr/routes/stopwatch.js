@@ -7,7 +7,7 @@ var router = express.Router();
 router.get(['/','/:todoId'], auth, async (req, res) => {
   const todoId=req.params.todoId;
   if(todoId==null || todoId==undefined){
-    res.render('stopwatch');
+    res.render('stopwatch', {userId:req.session.userId});
     return;
   }
 
@@ -15,10 +15,10 @@ router.get(['/','/:todoId'], auth, async (req, res) => {
   const rows = await conn.query('select * from todo where todo_id=?',[todoId])
   if(rows.length > 0){
     const todo = rows[0]
-    res.render('stopwatch', {todo:todo});
+    res.render('stopwatch', {todo:todo, userId:req.session.userId});
   }
   else {
-    res.render('stopwatch')
+    res.render('stopwatch', {userId:req.session.userId})
   }
 });
 

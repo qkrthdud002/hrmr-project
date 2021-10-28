@@ -7,9 +7,15 @@ $(()=>{
             alert('시간을 입력하세요.');
             return;
         }
-        if(hour=='') hour=0;
-        if(min=='') min=0;
-        if(sec=='') sec=0;
+        if(hour=='') {
+            hour=0;
+        }
+        if(min=='') {
+            min=0;
+        }
+        if(sec=='') {
+            sec=0;
+        }
         let timernumber = window.setInterval(()=>{
             console.log(1)
             sec = sec - 1;

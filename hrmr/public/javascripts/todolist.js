@@ -331,6 +331,8 @@ $(()=>{
           "valueZoomable": true
         }
       } );
+
+      
 });
 
 

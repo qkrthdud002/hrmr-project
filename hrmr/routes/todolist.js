@@ -3,24 +3,8 @@ var router = express.Router();
 var db = require('../model/dbcp');
 const auth=require('./interceptor');
 
-/* GET home page. */
-router.get('/', auth, async (req, res)=> {
-   query_date = req.query.date;
-  const conn = await db.getConnection();
-  const userId = req.session.userId;
-  if(userId==null || userId == undefined){
-    res.render('todolist');
-    return;
-  }
-
-  let today = new Date();
-
-
-  if(query_date==undefined){
+const getTodayDate = () => {
     //query_date에 오늘 날짜 저장.
-    new Date();
-    query_date = today;
-    console.log(query_date)
     //1. query_date.subtring(start_index, end_index);
     // var hour=string.substr();
     // var minute=string.substr();
@@ -40,19 +24,33 @@ router.get('/', auth, async (req, res)=> {
     var year = date.getFullYear().toString();
 
     var month = date.getMonth() + 1;
-    month = month < 10 ? '0' + month.query_date() : month.query_date();
+    
+    month = month < 10 ? '0' + month.toString() : month.toString();
 
     var day = date.getDate();
-    day = day < 10 ? '0' + day.query_date() : day.query_date();
+    day = day < 10 ? '0' + day.toString() : day.toString();
 
     return year + '-'+ month + '-'+ day ;
-    //}
+}
+
+/* GET home page. */
+router.get('/', auth, async (req, res)=> {
+  const query_date = req.query.date || getTodayDate();
+  const conn = await db.getConnection();
+  const userId = req.session.userId;
+  if(userId==null || userId == undefined){
+    res.render('todolist');
+    return;
   }
+  console.log(query_date)
+
   //DB에서 주어진 날짜의 todo list조회
   const todolist = await conn.query('select * from todo where todo_date=? and user_id=?', [query_date, userId]);
   
   // DB에서 주어진 날짜의 time_reoced 조회
-  const recordlist=await conn.query('select * from time_record where date(start_time)=? and user_id=?' [date, userId]);
+  const recordlist = await conn.query('select * from time_record where user_id=? AND date(start_time)=?', [userId, query_date]);
+  console.log('record')
+  console.log(recordlist)
   
   conn.end();
   res.render('todolist', {todolist: recordlist, userId:req.session.userId});

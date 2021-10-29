@@ -23,7 +23,9 @@ $(()=>{
             contentType:'application/json',
             data:JSON.stringify(data)
         })
+        // 나중에 이렇게 쓴 이유 설명
         .done((response)=>{
+            location.replace('/login')
             console.log(response);
             alert(response.result);
         })

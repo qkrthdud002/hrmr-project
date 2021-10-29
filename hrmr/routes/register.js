@@ -18,7 +18,7 @@ router.post('/', async(req, res) => {
   }
   await db.query('insert into user_information(user_id, user_password) values(?, ?)', [userId, password]);
   db.end()
-
+  
   res.json({result:'회원 등록 완료'})
   // res.json({result:'ok'});
 })

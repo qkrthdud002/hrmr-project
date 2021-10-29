@@ -332,51 +332,7 @@ $(()=>{
         }
       } );
 
-        function before_month() {
-    while (calendar.rows.length > 2) {
-        //2줄이 남을 때 까지 줄을 지워줌
-        //버튼과 요일이 남아야 하기 때문에 2줄만 남기고 지운다.
-          calendar.deleteRow(calendar.rows.length-1);
-        //length-1 = 아래서부터 지우라는 뜻
-              }
-    month = month-1
-      //한달씩 뒤로감
-    if( month === -1){
-      //0월이 되었을 때 이전연도 12월로 가도록 작업
-      //js에서 0월 = 실제 1월 이므로 -1로 맞춰야한다.
-      year = year - 1;
-      month = month + 12;
-    }
-    YM = year + "년" + (month+1) + "월"; 
-    document.getElementById("YM").innerHTML = YM;
-    first_date = new Date(year,month,1).getDate();
-    last_date = new Date(year,month+1,0).getDate();
-    first_day = new Date(year,month,1).getDay();
-    makecalendar();	
-    }
 
-  function next_month() {
-    while (calendar.rows.length > 2) {
-          calendar.deleteRow(calendar.rows.length-1);
-            }
-    month = month+1
-    //한달씩 증가함
-    if(month === 12){
-      //13월이 되었을 때 다음연도 1월로 가도록 작업
-      //js에서 11월 = 실제 12월 이므로 12로 맞춰야한다.
-      year = year + 1;
-      month = month -12;
-    }
-    
-    YM = year + "년" + (month+1) + "월"; 
-    document.getElementById("YM").innerHTML = YM;
-    first_date = new Date(year,month,1).getDate();
-    last_date = new Date(year,month+1,0).getDate();
-    first_day = new Date(year,month,1).getDay();
-    makecalendar();	
-  }
 
-  before_month();
+  
 });
-
-

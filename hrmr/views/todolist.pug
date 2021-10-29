@@ -2,7 +2,7 @@ extends layout
 
 block content 
   div(class="Todotitle")
-    p Todo
+    p Todo List
      //- input(type="date", name="todaysdate" class="todaydate")
     //- br
     //- br
@@ -16,40 +16,33 @@ block content
   br
   br
   br
-    //-label.a-checkbox
 
-    //-input(type="checkbox" checked=true)
-
-      //-<button type="button">
-      //-<img src="/images/todobutton.png" alt="이미지 없음">
-    //-p(class="buttons")
   
-    //-h4 할 일 추가
-  div(class="midde")
-    button(class="button")
-      span(class="icon")
-        i(class="fas fa-plus")
-    div(class="todoplus" style="margin-left:10px; margin-bottom:2em; display: flex; ")
-      h3 할 일 추가
-      
-    table(id="calendar")
-      thead 
-        tr 
-          td 
-            input(type="button" value="<")
-          td(colspan="3")
-            year-month 
-          td 
-            input(type="button" value=">")
-      tbody 
-        tr 
-          td 일
-          td 월
-          td 화
-          td 수
-          td 목
-          td 금
-          td 토
+  
+
+  head 
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title MHDP Full Calendar 
+  body 
+    div(class="calendar")
+      div(class="header")
+        div(class="year-month")
+        div(class="nav")
+          button(class="nav-btn go-prev") &lt;
+          button(class="nav-btn go-today") Today
+          button(class="nav-btn go-next") &gt; 
+      div(class="main")
+        div(class="days")
+          div(class="day") 일
+          div(class="day") 월
+          div(class="day") 화
+          div(class="day") 수
+          div(class="day") 목
+          div(class="day") 금
+          div(class="day") 토
+        div(class="dates")
+    script(src="todolist.js")
 
 
   script(src="https://www.amcharts.com/lib/3/amcharts.js")
@@ -58,9 +51,5 @@ block content
   script(src="https://www.amcharts.com/lib/3/gantt.js")
   script(src="/javascripts/todolist.js")
   div(id="chartdiv")
-  //- div(style="text-align: center;")
-  //-   input(type="button" value="1" onclick="setPageData(0);")
-  //-   input(type="button" value="2" onclick="setPageData(1);")
-  //-   input(type="button" value="3" onclick="setPageData(2);")
-  //-   input(type="button" value="4" onclick="setPageData(3);")
+
   

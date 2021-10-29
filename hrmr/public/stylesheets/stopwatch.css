@@ -2,20 +2,39 @@
 
 .outer_circle {
     margin: auto;
-    width: 600px;
-    height: 600px;
+    width: 720px;
+    height: 720px;
     border-radius: 50%;
     background-color: rgb(255, 199, 0);
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    margin-bottom : 100px;
+}
+
+.animation-bg {
+    background : linear-gradient(-45deg, #ee7752, orange, #e73d7e, #23a6d5, #23d5ab);
+    background-size : 400% 400%;
+    animation : gradient 7s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position : 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .inner_circle {
     margin: auto;
-    width: 570px;
-    height: 570px;
+    width: 680px;
+    height: 680px;
     border-radius: 50%;
     background-color: white;
     display: flex;

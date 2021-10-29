@@ -7,13 +7,12 @@ $(()=>{
     const appendseconds = document.getElementById("seconds");
     const buttonstsart = document.getElementById("stopwatch_button_start");
     const buttonstop = document.getElementById("stopwatch_button_stop");
+    const bg = document.getElementsByClassName("outer_circle")[0];
     let intervalId;
     $('#start').on('click', ()=>{
-        // 시작 시간을 저장하고
-        // 1초에 한 번 불리는 타이머 시작하고
         clearInterval(intervalId)
         intervalId = setInterval(operateTimer, 1000)
-    
+        bg.classList.add("animation-bg");
     });
     function operateTimer() {
         seconds++;
@@ -30,21 +29,18 @@ $(()=>{
             minutes = 0;
             appendminutes.textContent ="00"
         }
+        // 시작 시간을 저장하고
+        // 1초에 한 번 불리는 타이머 시작하고
     }
 
     $('#end').on('click', ()=>{
-        // let time = new Date();
-
-        // let hours = time.gethours();
-        // let minutes = time.getminutes();
-        // let seconds = time.getseconds();
-        // document.write(hours+':'+minutes+':'+seconds);
         clearInterval(intervalId)
+        bg.classList.remove("animation-bg");
         seconds = 0; minutes = 0; hours = 0;
         appendminutes.textContent = "00"
         appendseconds.textContent = "00"
         appendhours.textContent = "00"
-    //     // 시작 시간 읽어오고 
+
     //     const start_time=$('#start_time').val();
     //     // 현재 시각을 읽어온 다음
     //     const end_time= //현재시각 읽어오는 함수...

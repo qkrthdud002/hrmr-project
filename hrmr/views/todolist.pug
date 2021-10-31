@@ -11,40 +11,24 @@ block content
     //-   input(type="checkbox" class="checkboxsize")
     //-   input(type="text" name="title", class="todo" value=todo.title)
   div(class="todo")
-    input(type="checkbox" class="checkboxsize")
-    input(type="text" name="todolist1" class="todo")
+    input(type="checkbox", class="checkboxsize")
+    input(type="text", name="todolist1", class="todo")
+    input(type="button", class="stopwatch-btn", value="STOPWATCH")
+      //- button(class="stopwatch-btn")
+      //-   span(class="icon")
+      //-     i(class="trash-alt")
+    input(type="button", class="delete-btn", value="delete")
   br
   br
   br
+
+  button(class="button")
+    span(class="icon")
+      i(class="fas fa-plus")
+  div(class="todoplus")
+    h3 할 일 추가
 
   
-  
-
-  head 
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    title MHDP Full Calendar 
-  body 
-    div(class="calendar")
-      div(class="header")
-        div(class="year-month")
-        div(class="nav")
-          button(class="nav-btn go-prev") &lt;
-          button(class="nav-btn go-today") Today
-          button(class="nav-btn go-next") &gt; 
-      div(class="main")
-        div(class="days")
-          div(class="day") 일
-          div(class="day") 월
-          div(class="day") 화
-          div(class="day") 수
-          div(class="day") 목
-          div(class="day") 금
-          div(class="day") 토
-        div(class="dates")
-    script(src="todolist.js")
-
-
   script(src="https://www.amcharts.com/lib/3/amcharts.js")
   script(src="https://www.amcharts.com/lib/3/serial.js")
   script(src="https://www.amcharts.com/lib/3/themes/light.js")
@@ -52,4 +36,13 @@ block content
   script(src="/javascripts/todolist.js")
   div(id="chartdiv")
 
-  
+  div(id="calendar")
+
+  script(src="fullcalendar/core/main.css")
+  script(src="fullcalendar/pluginName/main.js")
+  script(src="fullcalendar/locals/lanuageName.js")
+  script(scr="/path/to/jquery.min.js")
+  script(src="/path/to/moment.min.js")
+  script(src="fullcalendar/fullcalendar.js")
+
+  div(id="container")

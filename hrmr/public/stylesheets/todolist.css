@@ -5,7 +5,7 @@
     border-top-width:0;
     border-bottom-width:1;
     outline:0px solid;
-    width:70%;
+    width:62%;
     height: 50%;
     font-size: 30px;
 }
@@ -29,6 +29,14 @@ pattern{
     background: repeating-linear-gradient(90deg, #444 10px, #888 0, #888 20px);
     background: repeating-linear-gradient(#444, #444 10px, #888 0, #888 20px);
 }
+.stopwatch-btn{
+    width:90px;
+    height:33px;
+}
+.delete-btn{
+    width:90px;
+    height:33px;
+}
 .button{
     width:30px;
     height:30px;
@@ -38,7 +46,7 @@ pattern{
     height: 200px;
   }
   .todoplus{
-    margin-left:3em; margin-bottom:2em;
+    margin-left:3em; margin-bottom:5em;
   }
 
   .midde{
@@ -57,3 +65,7 @@ pattern{
     border-color:#3333FF;
     border-radius: 8px;
   } */
+
+
+
+

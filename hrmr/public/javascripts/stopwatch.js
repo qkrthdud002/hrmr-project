@@ -10,9 +10,16 @@ $(()=>{
     const bg = document.getElementsByClassName("outer_circle")[0];
     let intervalId;
     $('#start').on('click', ()=>{
+        let today = new Date(); 
         clearInterval(intervalId)
         intervalId = setInterval(operateTimer, 1000)
         bg.classList.add("animation-bg");
+        let hours1 = today.getHours();       // 시
+        let minutes2 = today.getMinutes();   // 분
+        let seconds3 = today.getSeconds();   // 초
+        console.log(hours1)
+        console.log(minutes2)
+        console.log(seconds3)
     });
     function operateTimer() {
         seconds++;
@@ -34,12 +41,19 @@ $(()=>{
     }
 
     $('#end').on('click', ()=>{
+        let today = new Date(); 
         clearInterval(intervalId)
         bg.classList.remove("animation-bg");
         seconds = 0; minutes = 0; hours = 0;
         appendminutes.textContent = "00"
         appendseconds.textContent = "00"
         appendhours.textContent = "00"
+        let hours1 = today.getHours();       // 시
+        let minutes2 = today.getMinutes();   // 분
+        let seconds3 = today.getSeconds();   // 초
+        console.log(hours1)
+        console.log(minutes2)
+        console.log(seconds3)
 
     //     const start_time=$('#start_time').val();
     //     // 현재 시각을 읽어온 다음

@@ -23,27 +23,26 @@ block content
   br
 
 
-  button(class="button")
+  button(id="newTodo" class="button")
     span(class="icon")
       i(class="fas fa-plus")
   div(class="todoplus")
     h3 할 일 추가
 
   
-  script(src="https://www.amcharts.com/lib/3/amcharts.js")
-  script(src="https://www.amcharts.com/lib/3/serial.js")
-  script(src="https://www.amcharts.com/lib/3/themes/light.js")
-  script(src="https://www.amcharts.com/lib/3/gantt.js")
-  script(src="/javascripts/todolist.js")
+  //- script(src="https://www.amcharts.com/lib/3/amcharts.js")
+  //- script(src="https://www.amcharts.com/lib/3/serial.js")
+  //- script(src="https://www.amcharts.com/lib/3/themes/light.js")
+  //- script(src="https://www.amcharts.com/lib/3/gantt.js")
+
   div(id="chartdiv")
 
   div(id="calendar")
+  div(id="container")
 
   script(src="fullcalendar/core/main.css")
   script(src="fullcalendar/pluginName/main.js")
   script(src="fullcalendar/locals/lanuageName.js")
-  script(scr="/path/to/jquery.min.js")
-  script(src="/path/to/moment.min.js")
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js')
   script(src="fullcalendar/fullcalendar.js")
-
-  div(id="container")
+  script(type="javascript" src="/javascripts/todolist.js") 

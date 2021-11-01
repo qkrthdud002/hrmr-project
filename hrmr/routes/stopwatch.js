@@ -26,8 +26,8 @@ router.post('/:todoId', async (req, res)=>{
   const {start_time, end_time} = req.body;
 
   // time_record 테이블에 시간 정보 저장
-  const Data = `${todo_id}, ${start_time}, ${end_time}`
-  db.query(`INSERT INTO time_record(todo_id, start_time, end_time) VALUES(${Data})`)
+
+  await db.query('insert into time_record(todo_id, start_time, end_time) values(?, ?, ?)', [todo_id, start_time, end_time]);
   
   res.json({result:'ok'});
 });

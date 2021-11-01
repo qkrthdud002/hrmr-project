@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&display=swap');
+
+
 .todo{
     /* border: 0 solid ; */
     border-left-width:0;
@@ -29,14 +32,44 @@ pattern{
     background: repeating-linear-gradient(90deg, #444 10px, #888 0, #888 20px);
     background: repeating-linear-gradient(#444, #444 10px, #888 0, #888 20px);
 }
+
+
 .stopwatch-btn{
-    width:90px;
     height:33px;
+    color: black; background-color: white;
+    width: 90px; border: 1px solid rgb(255, 199, 0); border-radius: 8px;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
+
+.stopwatch-btn:hover {
+    color: rgb(53, 53, 53);
+    background-color:rgb(255, 245, 211);
+}
+
+.stopwatch-btn:active {
+    color: white;
+    background-color:rgb(255, 199, 0);
+}
+
 .delete-btn{
-    width:90px;
     height:33px;
+    color: black; background-color: white;
+    width: 90px; border: 1px solid rgb(255, 199, 0); border-radius: 8px;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
+
+.delete-btn:hover {
+    color: rgb(53, 53, 53);
+    background-color:rgb(255, 245, 211);
+}
+
+.delete-btn:active {
+    color: white;
+    background-color:rgb(255, 199, 0);
+}
+
 .button{
     width:30px;
     height:30px;

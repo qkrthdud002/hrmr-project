@@ -2,8 +2,8 @@
 
 .countdown_outer_circle {
     margin: auto;
-    width: 600px;
-    height: 600px;
+    width: 720px;
+    height: 720px;
     border-radius: 50%;
     background-color: rgb(255, 199, 0);
     display: flex;
@@ -14,8 +14,8 @@
 
 .countdown_inner_circle {
     margin: auto;
-    width: 570px;
-    height: 570px;
+    width: 680px;
+    height: 680px;
     border-radius: 50%;
     background-color: white;
     display: flex;
@@ -79,4 +79,10 @@ ul{
     list-style:none;
     padding-left:0px;
     font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+.countdown_timer {
+    font-size: 120px;
+    text-align: center;
+    margin-right: 0px;
 }

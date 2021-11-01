@@ -23,11 +23,11 @@ $(()=>{
             }
             if(min == 0 && hour != 0){
                 hour--;
-                min = 60;
+                min = 59
             }
             else if(sec == 0 && min != 0){
                 min--;
-                sec = 60;
+                sec = 59;
             }
             else if(sec == -1 && min == 0 && hour == 0){
                 // $('#time').text(String(hour).padStart(2,'0') + ":" + String(min).padStart(2,'0') + ":" + String(sec).padStart(2,'0'));

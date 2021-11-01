@@ -1,6 +1,6 @@
 $(()=>{
-    let intervalId;
     $('#start').on('click', ()=>{
+        let intervalId;
         let hour = $('#target_hour').val();
         let min = $('#target_min').val();
         let sec = $('#target_sec').val();
@@ -17,7 +17,7 @@ $(()=>{
         if(sec=='') {
             sec=0;
         }
-        let timernumber = window.setInterval(()=>{
+        intervalId = window.setInterval(()=>{
             console.log(1)
             if(sec != 0){
                 sec = sec - 1;

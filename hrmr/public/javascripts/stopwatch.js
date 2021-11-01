@@ -46,7 +46,7 @@ $(()=>{
         bg.classList.remove("animation-bg");
         seconds = 0; minutes = 0; hours = 0;
         appendminutes.textContent = "00"
-        appendseconds.textContent = "00"
+        appendseconds.textContent = "00" 
         appendhours.textContent = "00"
         let hours1 = today.getHours();       // 시
         let minutes2 = today.getMinutes();   // 분
@@ -59,17 +59,18 @@ $(()=>{
     //     // 현재 시각을 읽어온 다음
     //     const end_time= //현재시각 읽어오는 함수...
 
-    //     const data={
-    //         start_time: start_time,
-    //         end_time: end_time
-    // };
+        const data={
+            start_time: start_time,
+            end_time: end_time
+        };
     //     //서버로 전송
-    //     $.ajax({
-    //         url:'/stopwatch/'+todoId,
-    //         type:'post', 
-    //         data:JSON.stringify(data),
-    //         contentType:'application/json'
-    //     })
+
+        $.ajax({ 
+            url:'/stopwatch/'+todoId,
+            type:'post', 
+            data:JSON.stringify(data),
+            contentType:'application/json'
+        })
     //     .done((response)=>{
     //         // 저장 완료 alert 출력하고
     //         // todolist로 돌아가기.

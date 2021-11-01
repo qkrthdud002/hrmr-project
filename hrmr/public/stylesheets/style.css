@@ -109,23 +109,23 @@ a {
 
 .index-font-hrmr{
   font-weight: bold;
-  font-size:33px;
+  font-size:35px;
   text-decoration: overline underline rgb(250, 211, 71);
   text-underline-position: under;
 }
 
 .index-font{
   font-weight: bold;
-  font-size:25px;
+  font-size:27px;
 }
 
 .index-font-h1{
   font-weight: bold;
-  font-size:22px;
+  font-size:24px;
 }
 
 .index-font2{
-  font-size:20px;
+  font-size:22px;
 }
 /* nav.navbar{
   height: 5rem !important;

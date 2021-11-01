@@ -5,3 +5,7 @@ $(()=>{
   }
   alert('loaded'); 
 });
+
+$('div').find('input').each(function(){
+  console.log($(this.type()));
+});

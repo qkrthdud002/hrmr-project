@@ -1,4 +1,5 @@
 $(()=>{
+    let intervalId;
     $('#start').on('click', ()=>{
         let hour = $('#target_hour').val();
         let min = $('#target_min').val();
@@ -38,15 +39,20 @@ $(()=>{
             $('#time').text(String(hour).padStart(2,'0') + ":" + String(min).padStart(2,'0') + ":" + String(sec).padStart(2,'0'));
         }, 1000);
 
+        // $('#stop').on('click', ()=>{
+        //     $('#time').text(String(hour).padStart('00') + ":" + String(min).padStart('00') + ":" + String(sec).padStart('00'));
+        //     window.clearInterval(timernumber)
+        //     alert('종료');
+        //     return;
+        // });
+
         $('#stop').on('click', ()=>{
-            $('#time').text(String(hour).padStart('00') + ":" + String(min).padStart('00') + ":" + String(sec).padStart('00'));
-            window.clearInterval(timernumber)
+            clearInterval(intervalId)
+            sec = 0; min = 0; hour = 0;
             alert('종료');
-            return;
-        });
-        
-        $('#pause').on('click', ()=>{
-        
+            appendmin.textContent = "00"
+            appendsec.textContent = "00" 
+            appendhour.textContent = "00"
         });
     });
 });

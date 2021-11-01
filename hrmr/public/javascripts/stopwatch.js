@@ -10,6 +10,8 @@ $(()=>{
     const bg = document.getElementsByClassName("outer_circle")[0];
     let intervalId;
     $('#start').on('click', ()=>{
+        // 시작 시간을 저장하고
+        // 1초에 한 번 불리는 타이머 시작하고
         let today = new Date(); 
         clearInterval(intervalId)
         intervalId = setInterval(operateTimer, 1000)
@@ -36,8 +38,6 @@ $(()=>{
             minutes = 0;
             appendminutes.textContent ="00"
         }
-        // 시작 시간을 저장하고
-        // 1초에 한 번 불리는 타이머 시작하고
     }
 
     $('#end').on('click', ()=>{

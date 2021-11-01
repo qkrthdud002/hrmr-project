@@ -1,6 +1,6 @@
 $(()=>{
     $('#start').on('click', ()=>{
-        let intervalId;
+        let timernumber;
         let hour = $('#target_hour').val();
         let min = $('#target_min').val();
         let sec = $('#target_sec').val();
@@ -17,7 +17,7 @@ $(()=>{
         if(sec=='') {
             sec=0;
         }
-        intervalId = window.setInterval(()=>{
+        timernumber = window.setInterval(()=>{
             console.log(1)
             if(sec != 0){
                 sec = sec - 1;
@@ -30,8 +30,9 @@ $(()=>{
                 min--;
                 sec = 59;
             }
-            else if(sec == -1 && min == 0 && hour == 0){
+            else if(sec == 0 && min == 0 && hour == 0){
                 // $('#time').text(String(hour).padStart(2,'0') + ":" + String(min).padStart(2,'0') + ":" + String(sec).padStart(2,'0'));
+                $('#time').text('00:00:00')
                 alert('끝.');
                 window.clearInterval(timernumber)
                 return;
@@ -39,20 +40,18 @@ $(()=>{
             $('#time').text(String(hour).padStart(2,'0') + ":" + String(min).padStart(2,'0') + ":" + String(sec).padStart(2,'0'));
         }, 1000);
 
-        // $('#stop').on('click', ()=>{
-        //     $('#time').text(String(hour).padStart('00') + ":" + String(min).padStart('00') + ":" + String(sec).padStart('00'));
-        //     window.clearInterval(timernumber)
-        //     alert('종료');
-        //     return;
-        // });
-
         $('#stop').on('click', ()=>{
-            clearInterval(intervalId)
-            sec = 0; min = 0; hour = 0;
+            clearInterval(timernumber)
+            $('#time').text('00:00:00')
+            // window.clearInterval(timernumber)
             alert('종료');
-            appendmin.textContent = "00"
-            appendsec.textContent = "00" 
-            appendhour.textContent = "00"
+            return;
         });
+
+        // $('#stop').on('click', ()=>{
+        //     clearInterval(timernumber)
+        //     sec = 0; min = 0; hour = 0;
+        //     alert('종료');
+        // });
     });
 });

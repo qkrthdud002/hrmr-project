@@ -3,33 +3,27 @@ extends layout
 block content 
   div(class="Todotitle")
     p Todo List
-     //- input(type="date", name="todaysdate" class="todaydate")
-    //- br
-    //- br
-    //- br
-    //- each todo in todolist 
-    //-   input(type="checkbox" class="checkboxsize")
-    //-   input(type="text" name="title", class="todo" value=todo.title)
   div(class="todo")
-    div
-      input(type="checkbox", class="checkboxsize")
-      input(type="text", name="todolist1", class="todo")
-      input(type="button", class="stopwatch-btn", value="STOPWATCH")
-     
-      //-input(type="button", class="delete-btn", value="delete")
-      button(class="delete-btn")
-        span(class="icon")
-          i(class="fas fa-trash-alt")
+    // 저장된 todo
+    each todo in todolist
+      div
+        //input(type="checkbox", class="checkboxsize")
+        //input(type="text", name="todolist1", class="todo")
+        p(class="title is-3")=todo.todo_text
+        input(type="button", class="stopwatch-btn", value="STOPWATCH" todo_id=todo.todo_id)
+        button(class="delete-btn" todo_id=todo.todo_id)
+          span(class="icon")
+            i(class="fas fa-trash-alt")
   br
   br
   br
-
-
+  div(class="todoplus")
+    h3 할 일 추가
+  input(type='text' id='new-todotext')
   button(id="newTodo" class="button")
     span(class="icon")
       i(class="fas fa-plus")
-  div(class="todoplus")
-    h3 할 일 추가
+
 
   
   //- script(src="https://www.amcharts.com/lib/3/amcharts.js")
@@ -37,14 +31,14 @@ block content
   //- script(src="https://www.amcharts.com/lib/3/themes/light.js")
   //- script(src="https://www.amcharts.com/lib/3/gantt.js")
 
-  div(id="chartdiv")
+  //div(id="chartdiv")
 
-  div(id="calendar")
-  div(id="container")
+  //div(id="calendar")
+  //div(id="container")
 
-  script(src="fullcalendar/core/main.css")
-  script(src="fullcalendar/pluginName/main.js")
-  script(src="fullcalendar/locals/lanuageName.js")
+  //- script(src="fullcalendar/core/main.css")
+  //- script(src="fullcalendar/pluginName/main.js")
+  //- script(src="fullcalendar/locals/lanuageName.js")
   script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js')
-  script(src="fullcalendar/fullcalendar.js")
-  script(type="javascript" src="/javascripts/todolist.js") 
+  //- script(src="fullcalendar/fullcalendar.js")
+  script(src="/javascripts/todolist.js") 

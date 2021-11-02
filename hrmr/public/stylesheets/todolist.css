@@ -28,6 +28,13 @@
     width:30px;
     height:30px;
 }
+
+/* .checkboxsize input[type="checkbox"]:checked {
+    background-color: #ff8955;
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
+} */
+
 pattern{
     background: repeating-linear-gradient(90deg, #444 10px, #888 0, #888 20px);
     background: repeating-linear-gradient(#444, #444 10px, #888 0, #888 20px);
@@ -35,7 +42,9 @@ pattern{
 
 
 .stopwatch-btn{
-    height:33px;
+    height:40px;
+    margin-left: 5px;
+    margin-right: 3px;
     color: black; background-color: white;
     width: 90px; border: 1px solid rgb(255, 199, 0); border-radius: 8px;
     cursor: pointer;
@@ -53,7 +62,7 @@ pattern{
 }
 
 .delete-btn{
-    height:33px;
+    height:40px;
     color: black; background-color: white;
     width: 90px; border: 1px solid rgb(255, 199, 0); border-radius: 8px;
     cursor: pointer;

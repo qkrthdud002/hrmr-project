@@ -46,25 +46,28 @@ router.get('/', auth, async (req, res)=> {
 
   //DB에서 주어진 날짜의 todo list조회
   const todolist = await conn.query('select * from todo where todo_date=? and user_id=?', [query_date, userId]);
-  
+  console.log('todo list')
+  console.log(todolist)
   // DB에서 주어진 날짜의 time_reoced 조회
   const recordlist = await conn.query('select * from time_record where user_id=? AND date(start_time)=?', [userId, query_date]);
   console.log('record')
   console.log(recordlist)
   
   conn.end();
-  res.render('todolist', {todolist: recordlist, userId:req.session.userId});
+
+  res.render('todolist', {todolist: todolist, userId:req.session.userId});
 });
 
 // 할일 등록 
-router.post('/todolist', async (req, res)=>{
-  const {todoId, todotext}=req.body;
+router.post('/', auth, async (req, res)=>{
+  const {todotext}=req.body;
   const conn = await dbcp.getConnection();
   const rows = await conn.query(
-    `INSERT INTO todo (todoId, todotext) VALUES(${queryData})`
+    `INSERT INTO todo (todotext, user_id) VALUES(?, ?)`, [todotext, req.session.userId]
   );
+  console.log(rows);
   conn.end();
-  res.json({result:'ok'});
+  res.json({result:'ok', todo:rows});
 });
 
 // 할일 수정 - 완료처리

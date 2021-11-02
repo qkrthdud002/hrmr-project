@@ -1,0 +1,7 @@
+todolist.pug
+todolist.js
+
+html에서 script를 load하지 못하는 문제? 로 추정됨
+
+https://github.com/qkrthdud002/hrmr-project/commit/f34ca8723194c17ab12399b509294c486287a596
+위 커밋한 후부터 안된다고 함

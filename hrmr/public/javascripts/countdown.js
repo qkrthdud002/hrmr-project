@@ -1,5 +1,10 @@
 $(()=>{
+    let check = 1;
     $('#start').on('click', ()=>{
+        if(check == 0){
+            return;
+        }
+        check = 0;
         let timernumber;
         let hour = $('#target_hour').val();
         let min = $('#target_min').val();
@@ -41,6 +46,7 @@ $(()=>{
         }, 1000);
 
         $('#stop').on('click', ()=>{
+            check = 1;
             clearInterval(timernumber)
             $('#time').text('00:00:00')
             // window.clearInterval(timernumber)

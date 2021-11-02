@@ -11,10 +11,10 @@ $(()=>{
       contentType:'application/json',
     })
     .done((response)=>{
-      // 화면 새로 고침 
+      location.reload();
     })
     .fail((response, error)=>{
-
+      
     })
   });
 
@@ -27,4 +27,6 @@ $(()=>{
   });
 
   // 새 할일 등록
+  const newtodotext = $('#todoid').val();
+
 });

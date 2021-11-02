@@ -40,6 +40,11 @@ pattern{
     background: repeating-linear-gradient(#444, #444 10px, #888 0, #888 20px);
 }
 
+p{
+    text-align:right;
+    width:10%;
+    
+}
 
 .stopwatch-btn{
     height:40px;
@@ -91,7 +96,7 @@ pattern{
   .demo-theme-dark .demo-background {
     background: #000;
   }
-  
+
   .todoplus{
     margin-left:3em; margin-bottom:5em;
   }

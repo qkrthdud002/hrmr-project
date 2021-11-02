@@ -2,13 +2,13 @@ extends layout
 
 block content 
   div(class="Todotitle")
-    p Todo List
+    h1 Todo List
   div(class="todo")
-    // 저장된 todo
+    //- 저장된 todo
     each todo in todolist
       div
-        //input(type="checkbox", class="checkboxsize")
-        //input(type="text", name="todolist1", class="todo")
+        //-input(type="checkbox", class="checkboxsize")
+        //-input(type="text", name="todolist1", class="todo")
         p(class="title is-3")=todo.todo_text
         input(type="button", class="stopwatch-btn", value="STOPWATCH" todo_id=todo.todo_id)
         button(class="delete-btn" todo_id=todo.todo_id)
@@ -33,8 +33,8 @@ block content
 
   div(id="chartdiv" style='width:90%; height:500px')
 
-  //div(id="calendar")
-  //div(id="container")
+  //-div(id="calendar")
+  //-div(id="container")
 
   //- script(src="fullcalendar/core/main.css")
   //- script(src="fullcalendar/pluginName/main.js")

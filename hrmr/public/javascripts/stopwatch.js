@@ -55,7 +55,7 @@ $(()=>{
         // console.log(minutes2)
         // console.log(seconds3)
 
-    //     const start_time=$('#start_time').val();
+        // const start_time=$('#start_time').val();
     //     // 현재 시각을 읽어온 다음
     //     const end_time= //현재시각 읽어오는 함수...
 
@@ -63,9 +63,12 @@ $(()=>{
             start_time: start_time,
             end_time: end_time
         };
+
+        const url='/stopwatch/'+$('#todo_id').val();
+        console.log(url);
         //서버로 전송
         $.ajax({ 
-            url:'/stopwatch/',
+            url:url,
             type:'post',
             data:JSON.stringify(data),
             contentType:'application/json'

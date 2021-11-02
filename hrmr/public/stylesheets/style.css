@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -27,8 +26,8 @@ a {
 .login-box{
   color: LightGray;
   outline-style: ridge;
-  width: 450px;
-  height: 320px;
+  width: 590px;
+  height: 430px;
   font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
@@ -134,4 +133,8 @@ nav.navbar{
 
 .layout_text{
   font-size:24px;
+}
+
+.navbar-item img{
+  max-height: 4rem;
 }

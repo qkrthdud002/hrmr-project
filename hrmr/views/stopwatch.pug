@@ -3,6 +3,7 @@ extends layout
 block content
     script(src='/javascripts/stopwatch.js')
     input(type='hidden' id='start_time')
+    input(type='hidden' id='todo_id' value=todo.todo_id)
     div(class="stopwatch_container")
         h2(class='title is-1') STOP WATCH
         div(class="stopwatch_watch")

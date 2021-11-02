@@ -9,15 +9,15 @@ $(()=>{
     const buttonstop = document.getElementById("stopwatch_button_stop");
     const bg = document.getElementsByClassName("outer_circle")[0];
     let intervalId;
-    let start_time;
+    let start_time='';
     $('#start').on('click', ()=>{
         // 시작 시간을 저장하고
         // 1초에 한 번 불리는 타이머 시작하고
-        let today = new Date(); 
         clearInterval(intervalId)
         intervalId = setInterval(operateTimer, 1000)
         bg.classList.add("animation-bg");
-        start_time = today.toLocaleTimeString();
+        start_time = new Date().toISOString().slice(0, 19).replace('T', ' ');
+        
         console.log(start_time)
     });
     function operateTimer() {
@@ -38,24 +38,17 @@ $(()=>{
     }
 
     $('#end').on('click', ()=>{
-        let today = new Date(); 
         clearInterval(intervalId)
         bg.classList.remove("animation-bg");
         seconds = 0; minutes = 0; hours = 0;
         appendminutes.textContent = "00"
         appendseconds.textContent = "00" 
         appendhours.textContent = "00"
-
-        let end_time = today.toLocaleTimeString();
+        let end_time = '';
+        end_time = new Date().toISOString().slice(0, 19).replace('T', ' ');
         console.log(end_time)
-        // let hours1 = today.getHours();       // 시
-        // let minutes2 = today.getMinutes();   // 분
-        // let seconds3 = today.getSeconds();   // 초
-        // console.log(hours1)
-        // console.log(minutes2)
-        // console.log(seconds3)
 
-        // const start_time=$('#start_time').val();
+    //   const start_time=$('#start_time').val();
     //     // 현재 시각을 읽어온 다음
     //     const end_time= //현재시각 읽어오는 함수...
 
@@ -73,7 +66,7 @@ $(()=>{
             data:JSON.stringify(data),
             contentType:'application/json'
         })
-        .done((response)=>{  
+        .done((response)=>{
             // 저장 완료 alert 출력하고
             // todolist로 돌아가기.
             location.replace('/todolist')

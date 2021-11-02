@@ -19,14 +19,13 @@ html
     nav(class='navbar is-warning mb-4' role='navigation' aria-lable='main navigation')
       div(class='navbar-brand')
         a(class='navbar-item' href='/')
-          img(src='../images/hrmr.png' width=30 height=100)
+          img(src='../images/hrmr.png' width=35 height=100)
 
-      div(class='navbar-menu')
+      div(class='navbar-menu' class='layout_text')
         div(class='navbar-start')
           a(class='navbar-item' href='/') MAIN
           a(class='navbar-item' href='/todolist') TODOLIST
           a(class='navbar-item' href='/countdown')  COUNTDOWN
-          a(class='navbar-item' href='/stopwatch') STOPWATCH
 
         div(class='navbar-end')
           if userId==NULL

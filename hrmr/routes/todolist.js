@@ -61,9 +61,9 @@ router.get('/', auth, async (req, res)=> {
 // 할일 등록 
 router.post('/', auth, async (req, res)=>{
   const {todotext}=req.body;
-  const conn = await dbcp.getConnection();
+  const conn = await db.getConnection();
   const rows = await conn.query(
-    `INSERT INTO todo (todotext, user_id) VALUES(?, ?)`, [todotext, req.session.userId]
+    `INSERT INTO todo (todo_text, user_id, todo_date) VALUES(?, ?)`, [todotext, req.session.userId, getTodayDate()]
   );
   console.log(rows);
   conn.end();
@@ -74,6 +74,7 @@ router.post('/', auth, async (req, res)=>{
 router.put('/:todoId', async (req, res)=>{
   const todoId = req.params.todoId;
   const todotext = req.params.todotext;
+  const conn=await db.getConnection();
   const rows = await conn.query('select * from todo where todo_id=? and user_id=?', [ todoId, userId ])//?표에 들어갈 것은 다음 명령어? 배열에서 알려줌
 
   if(rows.length == 0) {
@@ -90,7 +91,7 @@ router.put('/:todoId', async (req, res)=>{
 // 할일 삭제 
 router.delete('/:todoId', async (req, res)=>{
   const todoId = req.params.todoId;
-  const conn = await dbcp.getConnection();
+  const conn = await db.getConnection();
   conn.query(`DELETE FROM todo WHERE todo_id=${todoId}`)
   res.json({result:'ok'});
 });

@@ -14,18 +14,19 @@ block content
         br
         h1(class='login-h1') 회원가입
         br
-        label(for='userId', class='login-label') 아이디   
-        input(class='input is-normal' type='text', size="26", name='userId', id='userId', placeholder='ID')
-        br
-        br
-        lable(for='password', class='login-label') 비밀번호
-        input(class='input is-normal' type='password', size="24", name='password', id='password', placeholder='PASSWORD')
-        br
-        br
-        lable(for='passwordcheck', class='login-label') 비밀번호 확인
-        input(class='input is-normal' type='password', size="19", name='passwordcheck', id='passwordcheck', placeholder='PASSWORD')
-        br
-        br
-        button(id="submitBtn" style='display:block; width:100%; text-align:center; font-size:1.1em; padding:7px;') 회원가입
-        br
+        form(action='/login',method='post')
+            label(for='userId', class='login-label') 아이디   
+            input(class='input is-normal' type='text', size="26", name='userId', id='userId', placeholder='ID')
+            br
+            br
+            lable(for='password', class='login-label') 비밀번호
+            input(class='input is-normal' type='password', size="24", name='password', id='password', placeholder='PASSWORD')
+            br
+            br
+            lable(for='passwordcheck', class='login-label') 비밀번호 확인
+            input(class='input is-normal' type='password', size="19", name='passwordcheck', id='passwordcheck', placeholder='PASSWORD')
+            br
+            br
+            button(id="submitBtn" style='display:block; width:100%; text-align:center; font-size:1.1em; padding:7px;') 회원가입
+            br
     script(src='/javascripts/register.js')

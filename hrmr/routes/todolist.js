@@ -42,20 +42,26 @@ router.get('/', auth, async (req, res)=> {
     res.render('todolist');
     return;
   }
-  console.log(query_date)
 
   //DB에서 주어진 날짜의 todo list조회
   const todolist = await conn.query('select * from todo where todo_date=? and user_id=?', [query_date, userId]);
-  console.log('todo list')
-  console.log(todolist)
-  // DB에서 주어진 날짜의 time_reoced 조회
-  const recordlist = await conn.query('select * from time_record where user_id=? AND date(start_time)=?', [userId, query_date]);
-  console.log('record')
-  console.log(recordlist)
-  
   conn.end();
 
   res.render('todolist', {todolist: todolist, userId:req.session.userId});
+});
+
+router.get('/records', auth, async(req, res)=>{
+  const query_date = req.query.date || getTodayDate();
+  const conn = await db.getConnection();
+  const userId = req.session.userId;
+
+  // DB에서 주어진 날짜의 time_reoced 조회
+  //SELECT r.*, t.todo_text FROM time_record r LEFT JOIN todo t ON r.todo_id=t.todo_id 
+  const recordlist = await conn.query('SELECT r.*, t.todo_text FROM time_record r LEFT JOIN todo t ON r.todo_id=t.todo_id where r.user_id=? AND date(start_time)=?', [userId, query_date]);
+  console.log(recordlist);
+  conn.end();
+
+  res.json(recordlist);
 });
 
 // 할일 등록 
@@ -63,9 +69,8 @@ router.post('/', auth, async (req, res)=>{
   const {todotext}=req.body;
   const conn = await db.getConnection();
   const rows = await conn.query(
-    `INSERT INTO todo (todo_text, user_id, todo_date) VALUES(?, ?)`, [todotext, req.session.userId, getTodayDate()]
+    `INSERT INTO todo (todo_text, user_id, todo_date) VALUES(?, ?, ?)`, [todotext, req.session.userId, getTodayDate()]
   );
-  console.log(rows);
   conn.end();
   res.json({result:'ok', todo:rows});
 });

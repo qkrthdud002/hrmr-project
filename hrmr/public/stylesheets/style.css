@@ -116,17 +116,22 @@ a {
 
 .index-font{
   font-weight: bold;
-  font-size:27px;
+  font-size:28px;
 }
 
 .index-font-h1{
   font-weight: bold;
-  font-size:24px;
+  font-size:26px;
 }
 
 .index-font2{
-  font-size:22px;
+  font-size:24px;
 }
-/* nav.navbar{
+
+nav.navbar{
   height: 5rem !important;
-} */
+} 
+
+.layout_text{
+  font-size:24px;
+}

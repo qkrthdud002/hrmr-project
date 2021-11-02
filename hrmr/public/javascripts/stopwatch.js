@@ -66,7 +66,7 @@ $(()=>{
         //서버로 전송
         $.ajax({ 
             url:'/stopwatch/',
-            type:'post', 
+            type:'post',
             data:JSON.stringify(data),
             contentType:'application/json'
         })

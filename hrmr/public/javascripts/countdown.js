@@ -1,11 +1,9 @@
 $(()=>{
-    let check = 1;
+    let timernumber=-1;
     $('#start').on('click', ()=>{
-        if(check == 0){
+        if(timernumber != -1){
             return;
         }
-        check = 0;
-        let timernumber;
         let hour = $('#target_hour').val();
         let min = $('#target_min').val();
         let sec = $('#target_sec').val();
@@ -40,24 +38,25 @@ $(()=>{
                 $('#time').text('00:00:00')
                 alert('끝.');
                 window.clearInterval(timernumber)
+                timernumber=-1
                 return;
             }
             $('#time').text(String(hour).padStart(2,'0') + ":" + String(min).padStart(2,'0') + ":" + String(sec).padStart(2,'0'));
         }, 1000);
-
-        $('#stop').on('click', ()=>{
-            check = 1;
-            clearInterval(timernumber)
-            $('#time').text('00:00:00')
-            // window.clearInterval(timernumber)
-            alert('종료');
-            return;
-        });
 
         // $('#stop').on('click', ()=>{
         //     clearInterval(timernumber)
         //     sec = 0; min = 0; hour = 0;
         //     alert('종료');
         // });
+    });
+
+    $('#stop').on('click', ()=>{
+        clearInterval(timernumber);
+        timernumber=-1;
+        $('#time').text('00:00:00')
+        // window.clearInterval(timernumber)
+        alert('종료');
+        return;
     });
 });

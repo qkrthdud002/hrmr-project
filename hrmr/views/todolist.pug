@@ -6,9 +6,11 @@ block content
   div(class="todo")
     br
     br
+    br
+    br
     //- 저장된 todo
     each todo in todolist
-      div
+      div(style="height:50px; margin-left:400px; text-decoration: underline;")
         //-input(type="checkbox", class="checkboxsize")
         //-input(type="text", name="todolist1", class="todo")
         //- div(class="todolist-btn")
@@ -19,15 +21,18 @@ block content
 
           
         div(class="field is-grouped")
-          p(class="title is-3")=todo.todo_text
+          //-div(class="control")
           div(class="control is-expanded")
-            
+            p(class="title is-3")=todo.todo_text
+              
           div(class="control")
             a(class="button is-info")
               input(type="button", class="stopwatch-btn", value="STOPWATCH" todo_id=todo.todo_id)
-              button(class="delete-btn" todo_id=todo.todo_id)
-                span(class="icon")
-                  i(class="fas fa-trash-alt")
+          div(class="control")
+            button(class="delete-btn" todo_id=todo.todo_id)
+              span(class="icon")
+                i(class="fas fa-trash-alt")
+                br
     
   br
   br

@@ -4,25 +4,40 @@ block content
   div(class="Todotitle")
     h1 Todo List
   div(class="todo")
+    br
+    br
     //- 저장된 todo
     each todo in todolist
       div
         //-input(type="checkbox", class="checkboxsize")
         //-input(type="text", name="todolist1", class="todo")
-        p(class="title is-3")=todo.todo_text
-        input(type="button", class="stopwatch-btn", value="STOPWATCH" todo_id=todo.todo_id)
-        button(class="delete-btn" todo_id=todo.todo_id)
-          span(class="icon")
-            i(class="fas fa-trash-alt")
+        //- div(class="todolist-btn")
+          //- input(type="button", class="stopwatch-btn", value="STOPWATCH" todo_id=todo.todo_id)
+          //- button(class="delete-btn" todo_id=todo.todo_id)
+          //-   span(class="icon")
+          //-     i(class="fas fa-trash-alt")
+
+          
+        div(class="field is-grouped")
+          p(class="title is-3")=todo.todo_text
+          div(class="control is-expanded")
+            
+          div(class="control")
+            a(class="button is-info")
+              input(type="button", class="stopwatch-btn", value="STOPWATCH" todo_id=todo.todo_id)
+              button(class="delete-btn" todo_id=todo.todo_id)
+                span(class="icon")
+                  i(class="fas fa-trash-alt")
+    
   br
   br
   br
   div(class="todoplus")
   
-  input(type='text' id='newtodotext')
-  button(id="newTodo" class="button")
-    span(class="icon")
-      i(class="fas fa-plus")
+    input(type='text' id='newtodotext')
+    button(id="newTodo" class="button")
+      span(class="icon")
+        i(class="fas fa-plus")
 
 
   script(src='https://cdn.amcharts.com/lib/4/core.js')

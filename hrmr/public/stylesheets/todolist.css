@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&display=swap');
 
 
-.todo{
+#newtodotext{
     /* border: 0 solid ; */
     border-left-width:0;
     border-right-width:0;
@@ -10,7 +10,9 @@
     outline:0px solid;
     width:62%;
     height: 50%;
-    font-size: 30px;
+    font-size: 28px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    
 }
 .todaydate{
     /*width:200px;
@@ -42,16 +44,21 @@ pattern{
 
 p{
     text-align:right;
-    width:10%;
+    width:50%;
     
+}
+
+.todolist-btn{
+    text-align:right;
+    width:96%;
 }
 
 .stopwatch-btn{
     height:40px;
     margin-left: 5px;
-    margin-right: 3px;
+    margin-right: 4px;
     color: black; background-color: white;
-    width: 90px; border: 1px solid rgb(255, 199, 0); border-radius: 8px;
+    width: 1500px; border: 1px solid rgb(255, 199, 0); border-radius: 8px;
     cursor: pointer;
     font-family: 'IBM Plex Sans KR', sans-serif;
 }
@@ -69,7 +76,7 @@ p{
 .delete-btn{
     height:40px;
     color: black; background-color: white;
-    width: 90px; border: 1px solid rgb(255, 199, 0); border-radius: 8px;
+    width: 1500px; border: 1px solid rgb(255, 199, 0); border-radius: 8px;
     cursor: pointer;
     font-family: 'IBM Plex Sans KR', sans-serif;
 }

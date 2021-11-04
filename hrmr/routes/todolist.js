@@ -99,6 +99,8 @@ router.delete('/:todoId', async (req, res)=>{
   const conn = await db.getConnection();
   conn.query(`DELETE FROM todo WHERE todo_id=${todoId}`)
   res.json({result:'ok'});
+
+  conn.end();
 });
 
 

@@ -13,6 +13,7 @@ router.get(['/','/:todoId'], auth, async (req, res) => {
   // db에서 주어진 todoId를 이용해 todo정보 조회
   const conn = await dbcp.getConnection()
   const rows = await conn.query('select * from todo where todo_id=?',[todoId])
+  conn.end()
   if(rows.length > 0){
     const todo = rows[0]
     res.render('stopwatch', {todo:todo, userId:req.session.userId});
@@ -21,7 +22,6 @@ router.get(['/','/:todoId'], auth, async (req, res) => {
   else {
     res.render('stopwatch', {userId:req.session.userId})
   }
-  db.end()
 });
 
 router.post('/:todoId', auth, async (req, res)=>{

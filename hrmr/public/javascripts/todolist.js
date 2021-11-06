@@ -79,8 +79,8 @@ $(()=>{
 
     var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
     dateAxis.renderer.minGridDistance = 70;
-    dateAxis.min = new Date("2021-11-01 05:00").getTime();
-    dateAxis.max = new Date("2021-12-31 02:00").getTime();
+    dateAxis.min = new Date("2021-11-06 1:00").getTime();
+    dateAxis.max = new Date("2021-11-07 00:00").getTime();
 
     dateAxis.baseInterval = { count: 1, timeUnit: "minute" };
     dateAxis.startLocation = -0.5;
@@ -124,7 +124,7 @@ $(()=>{
     flagBullet1.disabled = true;
     flagBullet1.propertyFields.disabled = "bulletf1";
     flagBullet1.locationX = 1;
-    flagBullet1.label.text = "start-time";
+    flagBullet1.label.text = "start_time";
 
     var flagBullet2 = new am4plugins_bullets.FlagBullet();
     series.bullets.push(flagBullet2);
@@ -132,7 +132,7 @@ $(()=>{
     flagBullet2.propertyFields.disabled = "bulletf2";
     flagBullet2.locationX = 0;
     flagBullet2.background.fill = interfaceColors.getFor("background");
-    flagBullet2.label.text = "end-time";
+    flagBullet2.label.text = "end_time";
 
     var bullet = new am4charts.CircleBullet();
     series.bullets.push(bullet);

@@ -56,7 +56,7 @@ $(()=>{
   am4core.ready(()=>{
     var container = am4core.create("chartdiv", am4core.Container);
     container.width = am4core.percent(100);
-    container.height = am4core.percent(100);
+    container.height = am4core.percent(10);
 
     var interfaceColors = new am4core.InterfaceColorSet();
     var colorSet = new am4core.ColorSet();
@@ -79,8 +79,8 @@ $(()=>{
 
     var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
     dateAxis.renderer.minGridDistance = 70;
-    dateAxis.min = new Date("2021-11-06 1:00").getTime();
-    dateAxis.max = new Date("2021-11-07 00:00").getTime();
+    dateAxis.min = new Date("2021-11-06 06:00").getTime();
+    dateAxis.max = new Date("2021-11-07 06:00").getTime();
 
     dateAxis.baseInterval = { count: 1, timeUnit: "minute" };
     dateAxis.startLocation = -0.5;

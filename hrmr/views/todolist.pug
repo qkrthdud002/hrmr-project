@@ -11,20 +11,9 @@ block content
     //- 저장된 todo
     each todo in todolist
       div(style="height:50px; margin-left:350px; text-decoration: underline;")
-        //-input(type="checkbox", class="checkboxsize")
-        //-input(type="text", name="todolist1", class="todo")
-        //- div(class="todolist-btn")
-          //- input(type="button", class="stopwatch-btn", value="STOPWATCH" todo_id=todo.todo_id)
-          //- button(class="delete-btn" todo_id=todo.todo_id)
-          //-   span(class="icon")
-          //-     i(class="fas fa-trash-alt")
-
-          
         div(class="field is-grouped")
-          //-div(class="control")
           div(class="control is-expanded")
-            p(class="title is-3")=todo.todo_text
-              
+            p(class="title is-3")=todo.todo_text 
           div(class="control")
             a(class="button is-info")
               input(type="button", class="stopwatch-btn", value="STOPWATCH" todo_id=todo.todo_id)
@@ -38,32 +27,15 @@ block content
   br
   br
   div(class="todoplus")
-  
     input(type='text' id='newtodotext')
     button(id="newTodo" class="button")
       span(class="icon")
-        i(class="fas fa-plus")
+        i(class='fas fa-plus')
 
+  div(id='chartdiv' style='width:90%; height:500px')
 
-  //- script(src='https://cdn.amcharts.com/lib/4/core.js')
-  //- script(src='https://cdn.amcharts.com/lib/4/charts.js')
-  //- script(src='https://cdn.amcharts.com/lib/4/plugins/timeline.js')
-  //- script(src='https://cdn.amcharts.com/lib/4/plugins/bullets.js')
-  //- script(src='https://cdn.amcharts.com/lib/4/themes/animated.js')
-
-  script(src="https://cdn.amcharts.com/lib/5/index.js")
-  script(src="https://cdn.amcharts.com/lib/5/xy.js")
-  script(src="https://cdn.amcharts.com/lib/5/themes/Animated.js")
-
-
-  div(id="chartdiv" style='width:90%; height:500px')
-
-  //-div(id="calendar")
-  //-div(id="container")
-
-  //- script(src="fullcalendar/core/main.css")
-  //- script(src="fullcalendar/pluginName/main.js")
-  //- script(src="fullcalendar/locals/lanuageName.js")
   script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js')
-  //- script(src="fullcalendar/fullcalendar.js")
-  script(src="/javascripts/todolist.js") 
+  script(src='https://cdn.amcharts.com/lib/5/index.js')
+  script(src='https://cdn.amcharts.com/lib/5/xy.js')
+  script(src='https://cdn.amcharts.com/lib/5/themes/Animated.js')
+  script(src='/javascripts/todolist.js') 

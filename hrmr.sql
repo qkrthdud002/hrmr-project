@@ -23,10 +23,11 @@ CREATE TABLE IF NOT EXISTS `time_record` (
   `todo_id` int(11) DEFAULT NULL,
   `start_time` datetime DEFAULT NULL,
   `end_time` datetime DEFAULT NULL,
+  `user_id` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`record_id`) USING BTREE,
   KEY `FK__todo` (`todo_id`) USING BTREE,
-  CONSTRAINT `FK__todo` FOREIGN KEY (`todo_id`) REFERENCES `todo` (`todo_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  CONSTRAINT `FK__todo` FOREIGN KEY (`todo_id`) REFERENCES `todo` (`todo_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- 내보낼 데이터가 선택되어 있지 않습니다.
 
@@ -35,12 +36,12 @@ CREATE TABLE IF NOT EXISTS `todo` (
   `todo_id` int(11) NOT NULL AUTO_INCREMENT,
   `todo_text` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
   `todo_date` date NOT NULL,
-  `finished` tinyint(4) NOT NULL DEFAULT 0, 
+  `finished` tinyint(4) NOT NULL DEFAULT 0,
   `user_id` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`todo_id`),
   KEY `FK__user_information` (`user_id`),
   CONSTRAINT `FK__user_information` FOREIGN KEY (`user_id`) REFERENCES `user_information` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- 내보낼 데이터가 선택되어 있지 않습니다.
 

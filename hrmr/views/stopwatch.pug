@@ -1,6 +1,8 @@
 extends layout
 
 block content
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone.min.js')
     script(src='/javascripts/stopwatch.js')
     input(type='hidden' id='start_time')
     input(type='hidden' id='todo_id' value=todo.todo_id)

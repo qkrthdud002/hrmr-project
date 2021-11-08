@@ -1,4 +1,5 @@
 $(()=>{
+    const bg = document.getElementsByClassName("countdown_outer_circle")[0];
     let timernumber=-1;
     $('#start').on('click', ()=>{
         if(timernumber != -1){
@@ -20,6 +21,7 @@ $(()=>{
         if(sec=='') {
             sec=0;
         }
+        bg.classList.add("animation-bg");
         timernumber = window.setInterval(()=>{
             console.log(1)
             if(sec != 0){
@@ -34,6 +36,7 @@ $(()=>{
                 sec = 59;
             }
             else if(sec == 0 && min == 0 && hour == 0){
+                bg.classList.remove("animation-bg");
                 // $('#time').text(String(hour).padStart(2,'0') + ":" + String(min).padStart(2,'0') + ":" + String(sec).padStart(2,'0'));
                 $('#time').text('00:00:00')
                 alert('끝.');
@@ -52,6 +55,7 @@ $(()=>{
     });
 
     $('#stop').on('click', ()=>{
+        bg.classList.remove("animation-bg");
         clearInterval(timernumber);
         timernumber=-1;
         $('#time').text('00:00:00')

@@ -10,13 +10,13 @@ block content
     br
     //- 저장된 todo
     each todo in todolist
-      div(style="height:50px; margin-left:350px; text-decoration: underline;")
+      div(style="height:50px; margin-left:350px; text-decoration: underline; width:820px;")
         div(class="field is-grouped")
           div(class="control is-expanded")
             p(class="title is-3")=todo.todo_text 
           div(class="control")
             a(class="button is-info")
-              input(type="button", class="stopwatch-btn", value="STOPWATCH" todo_id=todo.todo_id)
+              input(type="button", class="stopwatch-btn", id="title", value="STOPWATCH" todo_id=todo.todo_id)
           div(class="control")
             button(class="delete-btn" todo_id=todo.todo_id)
               span(class="icon")

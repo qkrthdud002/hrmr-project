@@ -30,6 +30,7 @@ $(()=>{
             alert(response.result);
         })
         .fail((request, status, err)=>{
+            location.replace('/register')
             const msg = JSON.parse(request.responseText);
             alert(msg.boom);
         });

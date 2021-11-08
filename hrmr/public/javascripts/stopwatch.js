@@ -1,4 +1,5 @@
 $(()=>{
+    moment.tz.add('Asia/Seoul|LMT KST JST KST KDT KDT|-8r.Q -8u -90 -90 -a0 -9u|012343434343151515151515134343|-2um8r.Q 97XV.Q 1m1zu 6CM0 Fz0 1kN0 14n0 1kN0 14L0 1zd0 On0 69B0 2I0u OL0 1FB0 Rb0 1qN0 TX0 1tB0 TX0 1tB0 TX0 1tB0 TX0 2ap0 12FBu 11A0 1o00 11A0|23e6');
     let hours = 0;
     let minutes = 0;
     let seconds = 0;
@@ -16,8 +17,7 @@ $(()=>{
         clearInterval(intervalId)
         intervalId = setInterval(operateTimer, 1000)
         bg.classList.add("animation-bg");
-        start_time = new Date().toISOString().slice(0, 19).replace('T', ' ');
-        
+        start_time = moment().tz('Asia/Seoul').format('yyyy-MM-DD HH:mm:ss');//new Date().toISOString().slice(0, 19).replace('T', ' ');
         console.log(start_time)
     });
     function operateTimer() {
@@ -45,7 +45,7 @@ $(()=>{
         appendseconds.textContent = "00" 
         appendhours.textContent = "00"
         let end_time = '';
-        end_time = new Date().toISOString().slice(0, 19).replace('T', ' ');
+        end_time = moment().tz('Asia/Seoul').format('yyyy-MM-DD HH:mm:ss');//new Date().toISOString().slice(0, 19).replace('T', ' ');
         console.log(end_time)
 
     //   const start_time=$('#start_time').val();

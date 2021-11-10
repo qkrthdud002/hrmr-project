@@ -24,12 +24,13 @@ $(()=>{
         bg.classList.add("animation-bg");
         timernumber = window.setInterval(()=>{
             console.log(1)
+            if(sec == 0 && min == 0 && hour != 0){
+                hour--;
+                min = 59;
+                sec = 60;
+            }
             if(sec != 0){
                 sec = sec - 1;
-            }
-            if(min == 0 && hour != 0){
-                hour--;
-                min = 59
             }
             else if(sec == 0 && min != 0){
                 min--;
@@ -59,6 +60,9 @@ $(()=>{
         clearInterval(timernumber);
         timernumber=-1;
         $('#time').text('00:00:00')
+        $('#target_hour').val('');
+        $('#target_min').val('');
+        $('#target_sec').val('');
         // window.clearInterval(timernumber)
         alert('종료');
         return;

@@ -21,13 +21,12 @@ $(()=>{
         if(sec=='') {
             sec=0;
         }
-        bg.classList.add("animation-bg");
         timernumber = window.setInterval(()=>{
             console.log(1)
             if(sec == 0 && min == 0 && hour != 0){
                 hour--;
                 min = 59;
-                sec = 60;
+                sec = 59;
             }
             if(sec != 0){
                 sec = sec - 1;
@@ -36,6 +35,17 @@ $(()=>{
                 min--;
                 sec = 59;
             }
+            if(sec < 0 || min < 0 || hour < 0){
+                bg.classList.remove("animation-bg");
+                $('#time').text('00:00:00')
+                alert('값을 다시 입력해주세요.');
+                window.clearInterval(timernumber)
+                timernumber=-1 
+                $('#target_hour').val('');
+                $('#target_min').val('');
+                $('#target_sec').val('');
+                return; 
+            }
             else if(sec == 0 && min == 0 && hour == 0){
                 bg.classList.remove("animation-bg");
                 // $('#time').text(String(hour).padStart(2,'0') + ":" + String(min).padStart(2,'0') + ":" + String(sec).padStart(2,'0'));
@@ -43,8 +53,12 @@ $(()=>{
                 alert('끝.');
                 window.clearInterval(timernumber)
                 timernumber=-1
-                return;
+                $('#target_hour').val('');
+                $('#target_min').val('');
+                $('#target_sec').val('');
+                return; 
             }
+            bg.classList.add("animation-bg");
             $('#time').text(String(hour).padStart(2,'0') + ":" + String(min).padStart(2,'0') + ":" + String(sec).padStart(2,'0'));
         }, 1000);
 

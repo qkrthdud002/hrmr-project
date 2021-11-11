@@ -41,9 +41,7 @@ $(()=>{
                 alert('값을 다시 입력해주세요.');
                 window.clearInterval(timernumber)
                 timernumber=-1 
-                $('#target_hour').val('');
-                $('#target_min').val('');
-                $('#target_sec').val('');
+                const targets = ["target_hour", "target_min", "target_sec"].forEach(it => $(`#${it}`).val(''))
                 return; 
             }
             else if(sec == 0 && min == 0 && hour == 0){
@@ -53,9 +51,7 @@ $(()=>{
                 alert('끝.');
                 window.clearInterval(timernumber)
                 timernumber=-1
-                $('#target_hour').val('');
-                $('#target_min').val('');
-                $('#target_sec').val('');
+                const targets = ["target_hour", "target_min", "target_sec"].forEach(it => $(`#${it}`).val(''))
                 return; 
             }
             bg.classList.add("animation-bg");

@@ -5,18 +5,13 @@ $(()=>{
         const passwordcheck = $('#passwordcheck').val();
         
         if(userId === ''){
-            $('#userId').val('');
-            $('#password').val('');
-            $('#passwordcheck').val('');
-            location.replace('/register');
+            const targets = ["userId", "password", "passwordcheck"]
+            targets.forEach(it => $(`#${it}`).val(''))
             alert('아이디는 필수 항목입니다.');
             return;
         }
         if(password!=passwordcheck){
-            $('#userId').val('');
-            $('#password').val('');
-            $('#passwordcheck').val('');
-            location.replace('/register');
+            const targets = ["userId", "password", "passwordcheck"].forEach(it => $(`#${it}`).val(''))
             alert('비밀번호가 일치하지 않습니다.');
             return;
         }

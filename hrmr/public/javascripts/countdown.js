@@ -35,7 +35,7 @@ $(()=>{
                 min--;
                 sec = 59;
             }
-            if(sec < 0 || min < 0 || hour < 0){
+            if(sec < 0 || sec > 60 || min < 0 || min > 60 || hour < 0){
                 bg.classList.remove("animation-bg");
                 $('#time').text('00:00:00')
                 alert('값을 다시 입력해주세요.');
